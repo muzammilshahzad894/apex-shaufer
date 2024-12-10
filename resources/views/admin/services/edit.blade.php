@@ -80,7 +80,8 @@
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <h4>Tax Section</h4>
+                            {{-- <h4>Tax Section</h4> --}}
+                            <div style="display: none;">
                                 <div id="taxes-section">
                                     @foreach($fleetTaxes as $index => $tax)
                                         <div class="tax-row row">
@@ -101,6 +102,8 @@
                                 <div class="col-md-2">
                                     <button type="button" class="btn btn-success mb-3" onclick="addTaxRow()">Add Tax</button>
                                 </div>
+                            </div>
+                              
                                 <hr>
                         </div>
                         <button type="submit" class="btn btn-primary">Update</button>

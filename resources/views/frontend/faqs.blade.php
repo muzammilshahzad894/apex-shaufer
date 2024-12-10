@@ -43,7 +43,7 @@
     .faq-section:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 20px #ffc1074d;
-        background: #f5b754;
+        background: #d5b941;
     }
 
     h1 {
@@ -56,7 +56,7 @@
         font-size: 29px !important;
         cursor: pointer;
         padding: 0 17px !important;
-        background: #f5b754;
+        background: #d5b941;
         border-radius: 50%;
         font-weight: 600 !important;
         transition: transform 0.1s ease;

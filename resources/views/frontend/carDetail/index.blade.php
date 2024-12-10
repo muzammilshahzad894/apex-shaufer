@@ -1,7 +1,7 @@
 @extends('layouts.frontend.app')
 <style>
     .header-details h6{
-        color: #f5b754;
+        color: #d5b941;
         background: black;
         margin-left: 60px;
     }
@@ -48,7 +48,7 @@
 
     .inner-title {
         font-weight: bold;
-        color: #ea963b;
+        color: #d5b941;
         font-size: 17px;
     }
 
@@ -85,7 +85,7 @@
 /* Title-specific styles */
 .custom-title {
     clip-path: polygon(0% 0, 100% 0, 87% 100%, 0% 100%);
-    background: #ea963b;
+    background: #d5b941;
     color: white;
 }
 
@@ -101,7 +101,7 @@
 @media (max-width: 768px) {
     .custom-title, .custom-subtitle {
         font-size: 14px; /* Reduce font size */
-        padding: 10px 20px; /* Adjust padding */
+        padding: 10px 44px 10px 10px; /* Adjust padding */
     }
 }
 ._padding{
@@ -112,7 +112,7 @@
     line-height: 10px;
     font-family: 'Outfit', sans-serif;
     font-weight: 300;
-    color: #f5b754;
+    color: #d5b941;
     margin-bottom: 15px;
     position: relative;
     display: inline-block;
@@ -134,7 +134,7 @@
 }
 [data-overlay-dark] .section-title span,
 .section-title span {
-    color: #f5b754;
+    color: #d5b941;
 }
 .section-title.white {
     color: black;
@@ -144,7 +144,7 @@
 }
 .list-icon{
     padding: 10px;
-    background: #f5b754;
+    background: #d5b941;
     color: white;
     border-radius: 50px;
     font-size: 14px
@@ -220,40 +220,39 @@
             <div class="row align-items-center">
                 <div class="col-md-12 col-sm-12 col-7">
                     <h2 class="heading-44-medium title-fleet wow fadeInUp" style="clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
-    background: rgb(236 154 65);color:white;">Our Services</h2>
+    background: #d5b941;color:white;">Our Services</h2>
                 </div>
             </div>
         </div>
         <div class="box-slide-fleet mt-50">
             <div class="box-swiper">
-                <div class="swiper-container swiper-group-4-service pb-0">
+                <div class="swiper-container swiper-group-4-fleet pb-0">
                     <div class="swiper-wrapper">
-                        
-                    @if ($services->count() > 0)
-                        @foreach ($services as $service)
-                            <div class="swiper-slide">
-                                <div class="cardService wow fadeInUp">
-                                    <div class="cardInfo">
-                                        <h3 class="cardTitle text-20-medium color-white mb-10">{{$service->name}}</h3>
-                                        <div class="box-inner-info">
-                                            <p class="cardDesc text-14 color-white mb-30 truncate">{{ $service->short_description }}</p><a class="cardLink btn btn-arrow-up"
-                                                href="{{ route('frontend.carDetails', $service->id) }}">
-                                                <svg class="icon-16" fill="none" stroke="currentColor"
-                                                    stroke-width="1.5" viewbox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
-                                                </svg></a>
-                                        </div>
-                                    </div>
-                                    <div class="cardImage"><img style="height: 270px;"
-                                            src="{{ asset('uploads/services/' . $service->image) }}"
+                        @if($services->count() > 0)
+                        @foreach($services as $service)
+                                <div class="swiper-slide">
+                                    <div class="cardFleet wow fadeInUp">
+                                        <div class="cardImage mb-30"><img style="height: 300px;"
+                                           src="{{ asset('uploads/services/'.$service->image) }}"
                                             alt="Luxride"></div>
+                                        <div class="cardInfo">
+                                                <h3 class="text-20-medium color-text mb-10">{{ $service->name }}</h3>
+                                            
+                                            <p class="text-14 color-text mb-30  two-lines">
+                                                {{ $service->short_description }}
+                                            </p>
+                                        </div>
+                                       
+                                        <div class="cardInfoBottom" style="justify-content: space-between">
+                                            <a class="view_details" href="{{ route('frontend.carDetails', $service->id) }}">View Details</a>
+                                            <a class="view_details" href="{{ route('frontend.book-online', ['id' => $service->id, 'name' => str_replace(' ', '-', $service->name)]) }}">Book Now</a>
+                                        </div>
+                                    
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
-                    @endif
-                       
+                            @endforeach
+                        @endif
+                      
                     </div>
                     <div class="box-pagination-fleet">
                         <div class="swiper-button-prev swiper-button-prev-fleet">
@@ -317,7 +316,7 @@
         }
 
         .cutom_button {
-            background-color: #f5b754;
+            background-color: #d5b941;
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -329,7 +328,7 @@
         }
 
         .cutom_button:hover {
-            background-color: #f5b754;
+            background-color: #d5b941;
         }
 
         .header {
@@ -338,17 +337,17 @@
 
         .view_details {
             color: white;
-            background: #ff8120;
+            background: #d5b941;
             border: none;
             padding: 5px 10px;
             border-radius: 10px;
-            width: 100%;
+            width: 120px;
             text-align: center;
             cursor: pointer;
         }
 
         .view_details:hover {
-            background: #ff8120;
+            background: #d5b941;
             color: wheat;
             cursor: pointer;
         }
@@ -377,7 +376,7 @@
         }
 
         .icon_bg i {
-            background: #ff8120;
+            background: #d5b941;
             margin: 5px;
             border-radius: 10px;
             font-size: 25px;

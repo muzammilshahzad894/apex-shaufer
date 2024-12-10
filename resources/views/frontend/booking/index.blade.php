@@ -5,20 +5,51 @@
 
 @include('frontend.booking.style-css')
 <style>
+    .icon_text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon_text i.icon-styled {
+    font-size: 20px; 
+    color: #e3cb85; /* Custom brand color */
+    background: linear-gradient(45deg, #e3cb85, #145650);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon_text i.icon-styled:hover {
+    transform: scale(1.2);
+    color: #b4530a; /* Darker shade for hover */
+    background: linear-gradient(45deg, #b4530a, #145650);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon_text p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+
     .styled-input {
-        border: 1px solid orange !important;
+        border: 1px solid #ecd991 !important;
     }
 
     input {
-        border: 1px solid orange !important;
+        border: 1px solid #ecd991 !important;
     }
 
     #pickupLocation {
-        border: 1px solid orange !important;
+        border: 1px solid #ecd991 !important;
     }
 
     .dropoffLocations {
-        border: 1px solid orange !important;
+        border: 1px solid #ecd991 !important;
     }
 
     #map {
@@ -33,7 +64,7 @@
 
     .minimum_hours {
         font-size: 12px;
-        color: orange;
+        color:#ecd991
 
     }
 
@@ -105,7 +136,7 @@
 
 @section('content')
     <section class="banner-header section-padding bg-img" data-overlay-dark="4"
-        data-background="{{ asset('frontend-assets/img/slider/booking_img2.jpeg') }}">
+        data-background="{{ asset('frontend-assets/img/slider/booking_img2.png') }}">
         <input type="hidden" id="login_user" value="{{ $userRole }}">
         <div class="v-middle">
             <div class="container">
@@ -118,10 +149,8 @@
                             <div class="divider"></div>
                             <div class="text-white"><a href="#">book online</a></div> --}}
                         </div>
-                        <h1 style="color: orange">Book Your Ride</h1>
-                        <p class="description" style="color: white;">Reserve your cab here. We provide a reliable 24-hour
-                            cab service in Bristol and across the UK, featuring professional drivers and transparent
-                            pricing. Experience hassle-free booking and exceptional service.</p>
+                        <h1 style="color: #d5b941">Book Your Ride</h1>
+                        <p class="description" style="color: white;">Book Your Cab with Ease! Apex Cabbie offers 24/7 reliable cab services in Bristol and across the UK. With experienced drivers and a commitment to customer satisfaction, we ensure a smooth and stress-free ride every time.</p>
                     </div>
                 </div>
             </div>
@@ -578,7 +607,7 @@
                             <button class="previous_btn button-1 mt-15 mb-15" onclick="prevStep()" type="button">
                                 Previous
                             </button>
-                            <button type="button" class="button-1 mt-15 mb-15 cutom_button" id="next_btn"
+                            <button type="button" class="button-1 mt-15 mb-15 cutom_button"style="background:#d5b941;" id="next_btn"
                                 onclick="nextStep()">
                                 Next
                             </button>
@@ -602,57 +631,55 @@
 
                         <div id="map"></div>
                     </div>
-                    <div style="padding: 10px;margin-top:10px">
+                    <div style="padding: 10px; margin-top: 10px;">
                         <h5 class="color">All classes include:</h5>
+                    
                         <div class="icon_text">
-                            <i class="fa-solid fa-check"></i>
-                            <p>
-                                Free registration
-                            </p>
+                            <i class="fa-solid fa-check icon-styled"></i>
+                            <p>Free registration</p>
                         </div>
+                    
                         <div class="icon_text">
-                            <i class="fa-solid fa-check"></i>
-                            <p>
-                                Free cancellation up to 24 hours before your scheduled pick-up
-                            </p>
+                            <i class="fa-solid fa-check icon-styled"></i>
+                            <p>Free cancellation up to 24 hours before your scheduled pick-up</p>
                         </div>
+                    
                         <div class="icon_text">
-                            <i class="fa-solid fa-check"></i>
-                            <p>
-                                Enjoy complimentary 1 hour waiting time for airport pickups
-                            </p>
+                            <i class="fa-solid fa-check icon-styled"></i>
+                            <p>Enjoy complimentary 1 hour waiting time for airport pickups</p>
                         </div>
+                    
                         <div class="icon_text">
-                            <i class="fa-solid fa-check"></i>
-                            <p>
-                                Luggage assistance
-                            </p>
+                            <i class="fa-solid fa-check icon-styled"></i>
+                            <p>Luggage assistance</p>
                         </div>
+                    
                         <div class="icon_text">
-                            <i class="fa-solid fa-check"></i>
-                            <p>
-                                Complimentary 15 min waiting period at all other pickups
-                            </p>
+                            <i class="fa-solid fa-check icon-styled"></i>
+                            <p>Complimentary 15 min waiting period at all other pickups</p>
                         </div>
                     </div>
-                    <div style="padding: 10px;margin-top:10px">
+                    
+                    <div style="padding: 10px; margin-top: 10px;">
                         <h5 class="color">Please Note:</h5>
+                    
                         <div class="icon_text">
-                            <i class="fa-solid fa-exclamation"></i>
+                            <i class="fa-solid fa-exclamation icon-styled"></i>
                             <p>
-                                Guest/laggage capacities must be abided by for safety reasons. if you are unsure select a
-                                large class as drivers may turn down service when they are exceeded.
+                                Guest/luggage capacities must be abided by for safety reasons. If you are unsure, select a
+                                larger class as drivers may turn down service when capacities are exceeded.
                             </p>
                         </div>
+                    
                         <div class="icon_text">
-                            <i class="fa-solid fa-exclamation"></i>
+                            <i class="fa-solid fa-exclamation icon-styled"></i>
                             <p>
-                                The vehicle images above are examples.You may get a different vehicle of the similar
+                                The vehicle images above are examples. You may get a different vehicle of similar
                                 quality.
                             </p>
                         </div>
-
                     </div>
+                    
                 </div>
             </div>
         </div>

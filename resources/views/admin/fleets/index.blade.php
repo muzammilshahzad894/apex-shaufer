@@ -17,7 +17,6 @@
                         <tr>
                             <th>Fleet Name</th>
                             <th>Image</th>
-                            <th>Price <small>(per mile)</small></th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -29,7 +28,6 @@
                                     <td>
                                         <img src="{{ asset('uploads/fleets/'.$fleet->image) }}" alt="{{ $fleet->image }}" class="img-fluid" width="70">
                                     </td>
-                                    <td>£{{ $fleet->price }}</td>
                                     <td>
                                         <a href="{{ route('admin.fleets.edit', $fleet->id) }}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
                                         <a href="{{ route('admin.fleets.delete', $fleet->id) }}"

@@ -8,11 +8,11 @@
     border-radius: 20px !important;
     }
     .form-control:focus{
-        border-color:orange !important;
+        border-color:#ecd991 !important;
         color: white !important;
         background: black !important;
         box-shadow: none !important;
-        border: 1px solid orange !important;
+        border: 1px solid #ecd991 !important;
 
     }
     .form-control{

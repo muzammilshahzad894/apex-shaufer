@@ -1,7 +1,7 @@
 @extends('layouts.frontend.app')
 <style>
     .header-details h6{
-        color: #f5b754;
+        color: #d5b941;
         background: black;
         margin-left: 60px;
     }
@@ -48,7 +48,7 @@
 
     .inner-title {
         font-weight: bold;
-        color: #ea963b;
+        color: #d5b941;
         font-size: 17px;
     }
 
@@ -85,7 +85,7 @@
 /* Title-specific styles */
 .custom-title {
     clip-path: polygon(0% 0, 100% 0, 87% 100%, 0% 100%);
-    background: #ea963b;
+    background: #d5b941;
     color: white;
 }
 
@@ -101,7 +101,7 @@
 @media (max-width: 768px) {
     .custom-title, .custom-subtitle {
         font-size: 14px; /* Reduce font size */
-        padding: 10px 20px; /* Adjust padding */
+        padding: 10px 44px 10px 10px; /* Adjust padding */
     }
 }
 ._padding{
@@ -112,7 +112,7 @@
     line-height: 10px;
     font-family: 'Outfit', sans-serif;
     font-weight: 300;
-    color: #f5b754;
+    color: #d5b941;
     margin-bottom: 15px;
     position: relative;
     display: inline-block;
@@ -134,7 +134,7 @@
 }
 [data-overlay-dark] .section-title span,
 .section-title span {
-    color: #f5b754;
+    color: #d5b941;
 }
 .section-title.white {
     color: black;
@@ -144,7 +144,7 @@
 }
 .list-icon{
     padding: 10px;
-    background: #f5b754;
+    background: #d5b941;
     color: white;
     border-radius: 50px;
     font-size: 14px

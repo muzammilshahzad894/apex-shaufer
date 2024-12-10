@@ -12,7 +12,7 @@
         color: black;
     }
     .fa-solid, .fas{
-        color: orange;
+        color:#ecd991
     }
     .count_fleets{
         color: white !important;
@@ -36,7 +36,7 @@
         justify-content: space-between;
         align-items: center;
         color: white;
-        background: #f0901d;
+        background: #d5b941;
         padding: 5;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
@@ -66,14 +66,14 @@
     .discount_btn{
         color: white;
         padding: 5px 20px;
-        background: #f0901d;
+        background: #d5b941;
     }
 
     .coupon_btn {
         padding: 10px;
         font-size: 14px;
         color: white;
-        background: #f0901d;
+        background: #d5b941;
     }
 
     .modal-body {
@@ -86,12 +86,12 @@
     }
 
     .modal-header {
-        background-color: orange;
+        background-color:#ecd991
 
     }
 
     #countdown h4 {
-        color: orange;
+        color:#ecd991
         font-family: cursive;
     }
 
@@ -137,7 +137,7 @@
     }
 
     .color {
-        color: #f8941d;
+        color: #d5b941;
         display: inline-block;
         border-bottom: 1px solid white;
         display: flex;
@@ -149,7 +149,7 @@
     .p-6 strong {
         font-weight: bolder;
         font-size: 19px;
-        color: #f0901d;
+        color: #d5b941;
         display: flex;
         justify-content: center;
         margin: 5px;
@@ -204,7 +204,7 @@
     }
 
     .button-1:hover {
-        background: #f0901d !important;
+        background: #d5b941 !important;
         color: white !important;
         /* font-size: 19px; */
         font-weight: 600;
@@ -283,7 +283,7 @@
     }
 
     .new_form button[type="submit"] {
-        background-color: #f5b754;
+        background-color: #d5b941;
         color: #fff;
         border: none;
         border-radius: 4px;
@@ -294,7 +294,7 @@
     }
 
     .new_form button[type="submit"]:hover {
-        background-color: #f5b754;
+        background-color: #d5b941;
     }
 
     .post {
@@ -330,7 +330,7 @@
     }
 
     .progress-step.active {
-        color: #f0901d;
+        color: #d5b941;
         font-size: 19px;
     }
 
@@ -348,7 +348,7 @@
         transform: translateX(-50%);
         width: 46px;
         height: 10px;
-        background-color: #f0901d;
+        background-color: #d5b941;
         border-radius: 25%;
     }
 
@@ -389,7 +389,7 @@
     }
 
     .summary strong {
-        color: orange;
+        color:#ecd991
         /* Set strong tag color to orange */
         min-width: 134px;
         /* Set minimum width for strong tag */
@@ -404,7 +404,7 @@
 
     .icon_text i {
         color: white;
-        background: orange;
+        background:#ecd991
         padding: 5px;
         border-radius: 14px;
     }
@@ -418,7 +418,7 @@
     /* Common styles for both input fields */
     .styled-input {
         background: #222222;
-        border: 1px solid #f0901d !important;
+        border: 1px solid #d5b941 !important;
         color: white;
         border: none;
         border-radius: 21px;
@@ -517,7 +517,7 @@
         }
 
         .plus_icon {
-            color: #f5b754;
+            color: #d5b941;
             margin-top: -16px;
             background: transparent;
             border: none;
@@ -623,7 +623,7 @@
         }
 
         /* .selected-fleet {
-            border: 2px solid #f0901d;
+            border: 2px solid #d5b941;
         } */
 
         .select2 {
@@ -632,7 +632,7 @@
 
         .styled-input1 {
             min-width: 70px;
-            border: 1px solid #f0901d;
+            border: 1px solid #d5b941;
             border: 1px solid white;
             margin-top: 5px;
         }
@@ -688,7 +688,7 @@
         }
 
         .dropdown_menus {
-            color: orange;
+            color:#ecd991
             font-size: 20px;
             font-weight: 600;
             padding: 20px 0px 0px 0px;

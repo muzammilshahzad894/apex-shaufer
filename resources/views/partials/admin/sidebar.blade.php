@@ -17,18 +17,18 @@
                         <span class="nav-text">Dashboard</span>
                     </a>
                 </li>
-                {{-- <li class="{{ request()->routeIs('admin.services.index') || request()->routeIs('admin.services.create') ? 'mm-active' : '' }}">
+                <li class="{{ request()->routeIs('admin.services.index') || request()->routeIs('admin.services.create') ? 'mm-active' : '' }}">
                     <a href="{{ route('admin.services.index') }}" class="" aria-expanded="false">
                         <i class="flaticon-381-networking"></i>
                         <span class="nav-text">Services</span>
                     </a>
-                </li> --}}
-                {{-- <li class="{{ request()->routeIs('admin.fleets.index') || request()->routeIs('admin.fleets.create') ? 'mm-active' : '' }}">
+                </li>
+                <li class="{{ request()->routeIs('admin.fleets.index') || request()->routeIs('admin.fleets.create') ? 'mm-active' : '' }}">
                     <a href="{{ route('admin.fleets.index') }}" class="" aria-expanded="false">
                         <i class="fa fa-list-ul"></i>
                         <span class="nav-text">Fleets</span>
                     </a>
-                </li> --}}
+                </li>
                 {{-- <li class="{{ request()->routeIs('admin.drivers.index') || request()->routeIs('admin.drivers.create') ? 'mm-active' : '' }} || request()->routeIs('admin.drivers.edit')">
                     <a href="{{ route('admin.drivers.index') }}" class="" aria-expanded="false">
                         <i class="fa fa-taxi"></i>

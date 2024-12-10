@@ -30,7 +30,7 @@ data-background="{{ asset('frontend-assets/img/slider/city_city.jpeg') }}" style
                     <!-- <div class="text-white"><a href="#">Trust Piolet Reviews</a></div> -->
                 </div>
                 <h1>Reviews</h1>
-                <p style="color: orange; font-size: 21px; font-weight: bold; line-height: 1.5;">
+                <p style="color:#ecd991 font-size: 21px; font-weight: bold; line-height: 1.5;">
                     Top-Rated On Trustpilot For Our <br> Punctual And Professional Cab Service.
                 </p>
             </div>

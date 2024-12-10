@@ -81,13 +81,16 @@
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                <h4>Tax Section</h4>
-                                <div id="taxes-section">
+                                {{-- <h4>Tax Section</h4> --}}
+                                <div style="display: none;">
+                                    <div id="taxes-section">
                                     
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="button" class="btn btn-success mb-3" onclick="addTaxRow()">Add Tax</button>
+                                    </div>
                                 </div>
-                                <div class="col-md-2">
-                                    <button type="button" class="btn btn-success mb-3" onclick="addTaxRow()">Add Tax</button>
-                                </div>
+                               
                                 <hr>
                             </div>
                             <button type="submit" class="btn btn-primary">Save</button>

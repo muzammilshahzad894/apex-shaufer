@@ -40,12 +40,12 @@
     }
 
     .modal-header {
-        background-color: orange;
+        background-color:#ecd991
 
     }
 
     #countdown h4 {
-        color: orange;
+        color:#ecd991
         font-family: cursive;
     }
 
@@ -226,7 +226,7 @@
     }
 
     .new_form button[type="submit"] {
-        background-color: #f5b754;
+        background-color: #d5b941;
         color: #fff;
         border: none;
         border-radius: 4px;
@@ -237,7 +237,7 @@
     }
 
     .new_form button[type="submit"]:hover {
-        background-color: #f5b754;
+        background-color: #d5b941;
     }
 
     .post {
@@ -330,7 +330,7 @@
     }
 
     .summary strong {
-        color: orange;
+        color:#ecd991
         /* Set strong tag color to orange */
         min-width: 100px;
         /* Set minimum width for strong tag */
@@ -345,7 +345,7 @@
 
     .icon_text i {
         color: white;
-        background: orange;
+        background:#ecd991
         padding: 5px;
         border-radius: 14px;
     }
@@ -456,7 +456,7 @@
         }
 
         .plus_icon {
-            color: #f5b754;
+            color: #d5b941;
             margin-top: -16px;
             background: transparent;
             border: none;
@@ -627,7 +627,7 @@
         }
 
         .dropdown_menus {
-            color: orange;
+            color:#ecd991
             font-size: 20px;
             font-weight: 600;
             padding: 20px 0px 0px 0px;

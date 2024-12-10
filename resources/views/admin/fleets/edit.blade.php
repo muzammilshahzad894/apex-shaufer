@@ -79,6 +79,7 @@
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
+                                    <div style="display: none;">
                                     <div class="mb-3 col-md-6">
                                         <label class="form-label">Price / mile <span class="text-danger">*</span></label>
                                         <input type="text" name="price" class="form-control" placeholder="Price"
@@ -416,6 +417,7 @@
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
+                                </div>
                                     <div class="mb-3 col-md-12">
                                         <label class="form-label">Detail Page Description <span
                                                 class="text-danger">*</span></label>
@@ -427,8 +429,8 @@
                                     </div>
                                     <hr>
                                     <!-- Tax fields section -->
-                                    <h4>Tax Section</h4>
-                                    <div id="taxes-section">
+                                    {{-- <h4>Tax Section</h4> --}}
+                                    {{-- <div id="taxes-section">
                                         @foreach ($fleetTaxes as $index => $tax)
                                             <div class="tax-row row">
                                                 <div class="mb-3 col-md-5">
@@ -454,7 +456,7 @@
                                     <div class="col-md-2">
                                         <button type="button" class="btn btn-success mb-3" onclick="addTaxRow()">Add
                                             Tax</button>
-                                    </div>
+                                    </div> --}}
                                     <hr>
                                     <!-- End tax fields section -->
                                     <!-- Meet and Greet Section -->

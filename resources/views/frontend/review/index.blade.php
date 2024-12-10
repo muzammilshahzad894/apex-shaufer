@@ -41,11 +41,11 @@
 
 .star:hover,
 .star:hover ~ .star {
-    color: orange;
+    color:#ecd991
 }
 
 .star.selected {
-    color: orange;
+    color:#ecd991
 }
 
     @media (max-width: 768px) {

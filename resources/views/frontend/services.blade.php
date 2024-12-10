@@ -1,7 +1,7 @@
 @extends('layouts.frontend.app')
 
 @section('content')
-<section class="banner-header section-padding bg-img services" data-overlay-dark="6" data-background="{{ asset('frontend-assets/img/slider/11.jpg') }}">
+<section class="banner-header section-padding bg-img services" data-overlay-dark="6" data-background="{{ asset('frontend-assets/img/slider/11.png') }}">
     <div class="v-middle">
         <div class="container">
             <div class="row">
@@ -23,56 +23,42 @@
         <div class="row">
             <div class="col-md-12 text-center mb-30">
                 <div class="section-subtitle"></div>
-                {{-- <h1 class="section-title">Other <span>Services</span></h1> --}}
+                <h1 class="section-title"> <span>Services</span></h1>
 
             </div>
-            {{-- <div class="col-md-12">
-                <div class="owl-carousel owl-theme">
-                    @if($services->count() > 0)
-                        @foreach($services as $service)
-                            <div class="item" style="padding:10px;">
-                                <div class="cars_details_view">
-                                    <div>
-                                        <img src="{{ asset('uploads/services/'.$service->image) }}" alt="" />
-                                        <h4 class="text-white mb-0 pt-2" style="font-size:24px;">{{ $service->name }}</h4>
-                                        <p style="color: #f5b754">{{ $service->tag }}</p>
-                                        <p style="color: white;" class="truncate">
-                                            {{ $service->short_description }}
-                                        </p>
-                                        <div class="d-flex justify-content-between gap-4">
-                                            <a class="view_details" href="{{ route('frontend.carDetails', $service->id) }}">View Details</a>
-                                            <a class="view_details" href="{{ route('frontend.book-online', ['id' => $service->id, 'name' => str_replace(' ', '-', $service->name)]) }}">
-                                                Book Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    @endif
-                </div>
-            </div> --}}
+         
             <div class="row">
                 @if($services->count() > 0)
                     @foreach($services as $service)
                         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                            <div class="cars_details_view">
-                                <div class="main-div-card">
-                                    <img src="{{ asset('uploads/services/'.$service->image) }}" alt="" class="img-fluid" />
-                                    <h4 class="text-white mb-0 pt-2" style="font-size:24px;">{{ $service->name }}</h4>
-                                    <p style="color: #f5b754">{{ $service->tag }}</p>
-                                    <p style="color: white;" class="truncate">
+                            <div class="cardFleet wow fadeInUp">
+                                <div class="cardImage mb-30"><img style="height: 300px;"
+                                   src="{{ asset('uploads/services/'.$service->image) }}"
+                                    alt="Luxride"></div>
+                                <div class="cardInfo">
+                                        <h3 class="text-20-medium color-text mb-10">{{ $service->name }}</h3>
+                                    
+                                    <p class="text-14 color-text mb-30  two-lines">
                                         {{ $service->short_description }}
                                     </p>
-                                    <div class="d-flex justify-content-between gap-4">
-                                        <a class="view_details" href="{{ route('frontend.carDetails', $service->id) }}">View Details</a>
-                                        <a class="view_details" href="{{ route('frontend.book-online', ['id' => $service->id, 'name' => str_replace(' ', '-', $service->name)]) }}">Book Now</a>
-                                    </div>
                                 </div>
+                               
+                                <div class="cardInfoBottom" style="justify-content: space-between">
+                                    <a class="view_details" href="{{ route('frontend.carDetails', $service->id) }}">View Details</a>
+                                    <a class="view_details" href="{{ route('frontend.book-online', ['id' => $service->id, 'name' => str_replace(' ', '-', $service->name)]) }}">Book Now</a>
+                                </div>
+                            
                             </div>
                         </div>
                     @endforeach
                 @endif
             </div>
+
+
+
+
+
+
             
         </div>
     </div>
@@ -119,7 +105,7 @@
     }
 
     .cutom_button {
-        background-color: #f5b754;
+        background-color: #d5b941;
         color: #fff;
         border: none;
         border-radius: 4px;
@@ -131,7 +117,7 @@
     }
 
     .cutom_button:hover {
-        background-color: #f5b754;
+        background-color: #d5b941;
     }
 
     .header {
@@ -140,11 +126,11 @@
 
     .view_details {
         color: white;
-        background: #d17e20;
+        background: #d7b733;
         border: none;
         padding: 10px 10px;
         border-radius: 10px;
-        width: 100%;
+        width: 120px;
         text-align: center;
         cursor: pointer;
     }
@@ -157,7 +143,7 @@
 
     .cars_details_view {
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-        border: 4px solid #f5b754;
+        border: 4px solid #d5b941;
         padding: 10px;
         border-radius: 10px;
         background: rgb(0 0 0 / 77%);

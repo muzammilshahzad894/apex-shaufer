@@ -1,6 +1,6 @@
 <style>
     .active {
-        color: orange !important;
+        color: #ecd991 !important;
     }
 </style>
 <header class="header sticky-bar">

@@ -75,13 +75,6 @@
                     <div class="col-md-12 col-12 d-flex align-items-center">
                         <h2 class="heading-44-medium title-fleet wow fadeInUp">Our Fleet</h2>
                     </div>
-                    {{-- <div class="col-lg-6 col-5 text-end"><a class="text-16-medium color-primary wow fadeInUp"
-                            href="#">More Fleet
-                            <svg class="icon-16" fill="none" stroke="currentColor" stroke-width="1.5"
-                                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
-                            </svg></a></div> --}}
                 </div>
             </div>
             <div class="box-slide-fleet mt-50">
@@ -135,7 +128,7 @@
                 </div>
             </div>
         </section>
-        <section class="section pt-120 pb-20 bg-primary bg-how-it-works" style="background-color: #916430 !important;">
+        <section class="section pt-120 pb-20 bg-primary bg-how-it-works" >
             <div class="container-sub">
                 <h2 class="heading-44-medium color-white mb-60 wow fadeInUp">How It Works</h2>
                 <div class="row">
@@ -326,8 +319,8 @@
               <div class="container-sub"> 
                 <div class="row align-items-center"> 
                   <div class="col-lg-6 mb-30">
-                    <h2 class="heading-44-medium color-text mb-30 wow fadeInUp">Hear what our amazing customers say</h2>
-                    <p class="text-16 color-text mb-30 wow fadeInUp">We provide exceptional service to our valued clients, ensuring satisfaction and quality with every interaction.</p>
+                    <h2 class="heading-44-medium color-text mb-30 wow fadeInUp" style="color: white !important;">Hear what our amazing customers say</h2>
+                    <p class="text-16 color-text mb-30 wow fadeInUp" style="color: white !important;">We provide exceptional service to our valued clients, ensuring satisfaction and quality with every interaction.</p>
                    
                   </div>
                   <div class="col-lg-6 mb-30">
@@ -406,7 +399,6 @@
                 </div>
             </div>
         </section>
-       
         <section class="section pt-40 mb-30 bg-faqs">
             <div class="container-sub">
                 <div class="box-faqs">
@@ -415,83 +407,121 @@
                     </div>
                     <div class="mt-60 mb-40">
                         <div class="accordion wow fadeInUp" id="accordionFAQ">
+        
+                            <!-- Question 1 -->
                             <div class="accordion-item">
                                 <h5 class="accordion-header" id="headingOne">
                                     <button class="accordion-button text-heading-5" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                        aria-controls="collapseOne">How do I create an account?</button>
+                                        aria-controls="collapseOne">How do I book a cab with Apex Cabbie?</button>
                                 </h5>
                                 <div class="accordion-collapse collapse show" id="collapseOne"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
-                                    <div class="accordion-body">Sad ipscing elitrsed diamnonu myeir mod, sadipscing
-                                        elitrsed dia morem ipsum dolor situamet consetetur loutrytru hury. Lorem ipsum dolor
-                                        sitametco nsetetur sa cingelitrse diamonu eirmoid, sad ipscing elitrstrud diamtre
-                                        ute riyutroui tout.</div>
+                                    <div class="accordion-body">
+                                        To book a cab, simply fill out the booking form with your pickup location, destination, date, and time. No upfront payment is required, and you will be contacted by our team with confirmation details.
+                                    </div>
                                 </div>
                             </div>
+        
+                            <!-- Question 2 -->
                             <div class="accordion-item">
                                 <h5 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button text-heading-5 collapsed" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                        aria-controls="collapseTwo">How do I earn Easy Ride Rewards points?</button>
+                                        aria-controls="collapseTwo">Will I be informed of the price before the ride?</button>
                                 </h5>
                                 <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionFAQ">
-                                    <div class="accordion-body">Sad ipscing elitrsed diamnonu myeir mod, sadipscing
-                                        elitrsed dia morem ipsum dolor situamet consetetur loutrytru hury. Lorem ipsum dolor
-                                        sitametco nsetetur sa cingelitrse diamonu eirmoid, sad ipscing elitrstrud diamtre
-                                        ute riyutroui tout.</div>
+                                    <div class="accordion-body">
+                                        Yes, once you submit your booking request, our team will analyze your trip details and send you the estimated price before confirming the booking.
+                                    </div>
                                 </div>
                             </div>
+        
+                            <!-- Question 3 -->
                             <div class="accordion-item">
                                 <h5 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button text-heading-5 collapsed text-heading-5 type="
-                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">How can I add my credit card on the app for
-                                        payments?</button>
-                                </h5>
-                                <div class="accordion-collapse collapse" id="collapseThree"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
-                                    <div class="accordion-body">Sad ipscing elitrsed diamnonu myeir mod, sadipscing
-                                        elitrsed dia morem ipsum dolor situamet consetetur loutrytru hury. Lorem ipsum dolor
-                                        sitametco nsetetur sa cingelitrse diamonu eirmoid, sad ipscing elitrstrud diamtre
-                                        ute riyutroui tout.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h5 class="accordion-header" id="headingFour">
                                     <button class="accordion-button text-heading-5 collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour">How do I become a Captain?</button>
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">Can I modify or cancel my booking?</button>
                                 </h5>
-                                <div class="accordion-collapse collapse" id="collapseFour" aria-labelledby="headingFour"
+                                <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree"
                                     data-bs-parent="#accordionFAQ">
-                                    <div class="accordion-body">Sad ipscing elitrsed diamnonu myeir mod, sadipscing
-                                        elitrsed dia morem ipsum dolor situamet consetetur loutrytru hury. Lorem ipsum dolor
-                                        sitametco nsetetur sa cingelitrse diamonu eirmoid, sad ipscing elitrstrud diamtre
-                                        ute riyutroui tout.</div>
+                                    <div class="accordion-body">
+                                        Yes, you can modify or cancel your booking by contacting our support team. Please note that changes should be made at least 24 hours before the scheduled pickup time.
+                                    </div>
                                 </div>
                             </div>
+        
+        
+                            <!-- Question 5 -->
                             <div class="accordion-item">
                                 <h5 class="accordion-header" id="headingFive">
                                     <button class="accordion-button text-heading-5 collapsed" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
-                                        aria-controls="collapseFive">Where can I get more information, support or make a
-                                        claim? </button>
+                                        aria-controls="collapseFive">How do I get updates on my booking status?</button>
                                 </h5>
                                 <div class="accordion-collapse collapse" id="collapseFive" aria-labelledby="headingFive"
                                     data-bs-parent="#accordionFAQ">
-                                    <div class="accordion-body">Sad ipscing elitrsed diamnonu myeir mod, sadipscing
-                                        elitrsed dia morem ipsum dolor situamet consetetur loutrytru hury. Lorem ipsum dolor
-                                        sitametco nsetetur sa cingelitrse diamonu eirmoid, sad ipscing elitrstrud diamtre
-                                        ute riyutroui tout.</div>
+                                    <div class="accordion-body">
+                                        Once your booking is confirmed, you will receive an email or SMS with the ride details, driver information, and estimated arrival time.
+                                    </div>
                                 </div>
                             </div>
+        
+                          
+        
+                            <!-- Question 7 -->
+                            <div class="accordion-item">
+                                <h5 class="accordion-header" id="headingSeven">
+                                    <button class="accordion-button text-heading-5 collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false"
+                                        aria-controls="collapseSeven">Can I book a cab for a long-distance trip?</button>
+                                </h5>
+                                <div class="accordion-collapse collapse" id="collapseSeven" aria-labelledby="headingSeven"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        Yes, you can book a cab for local as well as long-distance trips. Just provide your trip details, and we will send you a custom quote.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <!-- Question 8 -->
+                            <div class="accordion-item">
+                                <h5 class="accordion-header" id="headingEight">
+                                    <button class="accordion-button text-heading-5 collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false"
+                                        aria-controls="collapseEight">Can I request a specific type of vehicle?</button>
+                                </h5>
+                                <div class="accordion-collapse collapse" id="collapseEight" aria-labelledby="headingEight"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        Yes, you can request a specific type of vehicle (like an SUV, sedan, or minivan) during the booking process. Availability depends on the location and time of booking.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <!-- Question 9 -->
+                            <div class="accordion-item">
+                                <h5 class="accordion-header" id="headingNine">
+                                    <button class="accordion-button text-heading-5 collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false"
+                                        aria-controls="collapseNine">How do I contact customer support?</button>
+                                </h5>
+                                <div class="accordion-collapse collapse" id="collapseNine" aria-labelledby="headingNine"
+                                    data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body">
+                                        You can contact our support team via email or by calling our 24/7 helpline. All contact details are listed on our website's "Contact Us" page.
+                                    </div>
+                                </div>
+                            </div>
+        
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
        
     </main>
 @endsection

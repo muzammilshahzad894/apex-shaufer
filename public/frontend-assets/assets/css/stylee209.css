@@ -460,7 +460,7 @@ h6 {
 }
 
 .bg-secondary {
-  background-color: #db8f38 !important;
+  background-color: #d4c480 !important;
 }
 
 .text-14 {
@@ -554,7 +554,7 @@ h6 {
 }
 
 .color-secondary {
-  color: #db8f38;
+  color: #d4c480;
 }
 
 .color-mutted {
@@ -839,11 +839,11 @@ img:hover {
 }
 
 a.color-text:hover, a.color-text:hover *, a.color-white:hover, a.color-white:hover *, a.color-primary:hover, a.color-primary:hover * {
-  color: #db8f38 !important;
+  color: #d4c480 !important;
 }
 
 .tags a:hover, .latest-new-white .tags a:hover {
-  color: #db8f38 !important;
+  color: #d4c480 !important;
 }
 
 .box-button-download .btn-download {
@@ -1025,7 +1025,7 @@ body {
   margin-right: 10px;
 }
 .btn.btn-search:hover {
-  background-color: #db8f38;
+  background-color: #d4c480;
   color: #fff;
 }
 .btn.btn-search-2 {
@@ -1108,7 +1108,7 @@ body {
   border: 0px;
 }
 .btn.btn-primary:hover {
-  background-color: #db8f38;
+  background-color: #d4c480;
   color: #fff;
 }
 .btn.btn-primary-big {
@@ -1133,7 +1133,7 @@ body {
   color: #fff;
 }
 .btn.btn-secondary {
-  background-color: #db8f38;
+  background-color: #d4c480;
   border-radius: 6px;
   padding: 14px 24px;
   color: #fff;
@@ -1274,7 +1274,7 @@ body {
 .btn.btn-rounded {
   border-radius: 60px;
   padding: 0px 20px;
-  color: #db8f38;
+  color: #d4c480;
   font-size: 13px;
   line-height: 28px;
   font-weight: 500;
@@ -1297,7 +1297,7 @@ body {
   vertical-align: middle;
 }
 .btn.btn-like:hover {
-  color: #db8f38;
+  color: #d4c480;
 }
 .btn.btn-dislike {
   font-size: 14px;
@@ -1309,7 +1309,7 @@ body {
   vertical-align: middle;
 }
 .btn.btn-dislike:hover {
-  color: #db8f38;
+  color: #d4c480;
 }
 .btn.btn-book {
   max-width: 320px;
@@ -1860,7 +1860,7 @@ body {
   position: relative;
 }
 .cardFleet .cardInfo a:hover h3 {
-  color: #db8f38 !important;
+  color: #d4c480 !important;
 }
 .cardFleet .cardImage {
   position: relative;
@@ -1921,7 +1921,7 @@ body {
   background-color: #F6F6F6;
 }
 .cardFleet.cardFleetStyle2:hover .cardInfo h3 {
-  color: #db8f38 !important;
+  color: #d4c480 !important;
 }
 .cardFleet.cardFleetStyle3 {
   border: 0px;
@@ -2117,7 +2117,7 @@ body {
   color: #181A1F !important;
 }
 .cardServiceStyle4:hover .cardInfo .color-white {
-  color: #db8f38 !important;
+  color: #d4c480 !important;
 }
 
 .cardTestimonial {
@@ -2146,7 +2146,7 @@ body {
   font-weight: 400;
 }
 .cardCities .cardInfo .cardTitle:hover {
-  color: #db8f38 !important;
+  color: #d4c480 !important;
 }
 .cardCities .cardInfo .cardDesc {
   font-size: 17px;
@@ -2504,7 +2504,7 @@ body {
   margin: -10px -20px;
 }
 .page-loading-inner div:nth-child(1) {
-  background: #db8f38;
+  background: #d4c480;
   animation: page-loading-inner 1s linear infinite;
   animation-delay: -0.5s;
 }
@@ -2514,7 +2514,7 @@ body {
   animation-delay: 0s;
 }
 .page-loading-inner div:nth-child(3) {
-  background: #db8f38;
+  background: #d4c480;
   animation: page-loading-inner-o 1s linear infinite;
   animation-delay: -0.5s;
 }
@@ -6224,9 +6224,12 @@ footer a {
   max-width: 770px;
   margin: auto;
 }
+.h2.heading-44-medium.color-text.mb-30.wow.fadeInUp {
+  color: white !important;
+}
 
 .bg-showcase {
-  background-color: #db8f38;
+  background-color: black;
   background-image: url(../imgs/page/homepage1/bg-showcase.png);
   background-repeat: no-repeat;
   background-position: top right;
@@ -6430,7 +6433,7 @@ footer a {
 }
 
 .box-fleet-padding {
-  background-color: #f39e42 !important;
+  background-color: black !important;
   border-radius: 12px;
   padding-top: 120px;
   padding-bottom: 120px;
@@ -6460,7 +6463,7 @@ footer a {
   font-weight: 500;
 }
 .box-btn-play-video .btn-white:hover {
-  background-color: #db8f38;
+  background-color: #d4c480;
 }
 
 .box-number-info {
@@ -6583,7 +6586,7 @@ footer a {
   padding: 30px;
 }
 .box-search-ride-style-2 .box-form-search .btn-search {
-  background-color: #db8f38;
+  background-color: #d4c480;
   border-radius: 6px;
   width: 100%;
 }
@@ -6748,7 +6751,7 @@ footer a {
   bottom: 15px;
 }
 .list-how-2 li.slick-current .number-circle, .list-how-2 li.active .number-circle, .list-how-2 li:hover .number-circle {
-  background-color: #db8f38;
+  background-color: #d4c480;
 }
 .list-how-2 li:last-child {
   margin-bottom: 0px;
@@ -6794,7 +6797,7 @@ footer a {
   justify-content: center;
 }
 .box-btn-play .btn-white:hover {
-  background-color: #db8f38;
+  background-color: #d4c480;
 }
 
 .list-ticks li {
@@ -6983,7 +6986,7 @@ footer a {
   color: #fff !important;
 }
 .bg-our-fleet-2 .cardCities .cardInfo .cardTitle:hover {
-  color: #db8f38 !important;
+  color: #d4c480 !important;
 }
 
 .footer-5 {
@@ -7187,7 +7190,7 @@ footer a {
   background-color: #FDEEEC;
 }
 .box-search-ride-3 .btn.btn-search {
-  background-color: #db8f38;
+  background-color: #d4c480;
 }
 .box-search-ride-3 .btn.btn-search:hover {
   background-color: #000000;
@@ -7592,7 +7595,7 @@ footer a {
   color: #fff;
 }
 .box-banner-homepage-8 .box-search-ride-style-4 .box-form-search .btn-search:hover {
-  background-color: #db8f38;
+  background-color: #d4c480;
   color: #fff;
 }
 
@@ -7728,7 +7731,7 @@ footer a {
 }
 .box-search-ride-5 .btn-search {
   border-radius: 6px;
-  background-color: #db8f38;
+  background-color: #d4c480;
 }
 .box-search-ride-5 .btn-search:hover {
   background-color: #181A1F;
@@ -7866,7 +7869,7 @@ footer a {
 .box-search-ride-style-6 .btn-search {
   border-radius: 6px;
   width: 100%;
-  background-color: #db8f38;
+  background-color: #d4c480;
 }
 .box-search-ride-style-6 .nav-tabs-search {
   border-bottom: 0px;
@@ -8805,7 +8808,7 @@ input:checked + .slider:before {
 .list-icons li .icon-item {
   width: 40px;
   height: 40px;
-  background-color: #db8f38;
+  background-color: #d4c480;
   margin-right: 25px;
   color: #fff;
   font-size: 14px;
@@ -8889,7 +8892,7 @@ input:checked + .slider:before {
   background-color: #F0FBF7;
 }
 .item-vehicle:hover .btn-primary {
-  background-color: #db8f38;
+  background-color: #d4c480;
   color: #fff;
 }
 .item-vehicle:hover .btn-primary svg {
@@ -8948,7 +8951,7 @@ input:checked + .slider:before {
   text-decoration: underline;
 }
 .item-vehicle .vehicle-left .link:hover {
-  color: #db8f38;
+  color: #d4c480;
 }
 .item-vehicle .vehicle-right {
   width: 33%;
@@ -8988,7 +8991,7 @@ input:checked + .slider:before {
 .list-extras .item-extra .extra-info span.price {
   font-size: 14px;
   line-height: 24px;
-  background-color: #db8f38;
+  background-color: #d4c480;
   display: inline-block;
   padding: 3px 14px;
   border-radius: 40px;
@@ -9280,7 +9283,7 @@ input:checked + .slider:before {
   margin-bottom: 30px;
   color: #181A1F;
   padding: 20px 10px 30px 75px;
-  border-left: 5px solid #db8f38;
+  border-left: 5px solid #d4c480;
   background-image: url(../imgs/page/blog2/quote.png);
   background-position: top 7px left 22px;
   background-repeat: no-repeat;
@@ -9364,7 +9367,7 @@ input:checked + .slider:before {
   height: 25px;
 }
 .box-pager-inner a.prev-page:hover, .box-pager-inner a.prev-page:hover * {
-  color: #db8f38;
+  color: #d4c480;
 }
 .box-pager-inner a.next-page {
   position: relative;
@@ -9378,7 +9381,7 @@ input:checked + .slider:before {
   height: 25px;
 }
 .box-pager-inner a.next-page:hover, .box-pager-inner a.next-page:hover * {
-  color: #db8f38;
+  color: #d4c480;
 }
 
 .item-reviews {

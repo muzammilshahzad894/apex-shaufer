@@ -201,7 +201,7 @@ function copyToClipboardsecond() {
     }
 
     .modal-header {
-        background-color: orange;
+        background-color:#ecd991
 
     }
     .location-container {
@@ -209,7 +209,7 @@ function copyToClipboardsecond() {
 }
 
     #countdown h4 {
-        color: orange;
+        color:#ecd991
         font-family: cursive;
     }
 

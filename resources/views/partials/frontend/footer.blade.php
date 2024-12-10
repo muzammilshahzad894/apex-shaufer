@@ -19,14 +19,14 @@
     color: #fff;
     outline: none;
     padding: 0 90px 0 20px;
-    border: 1px solid #f5b754;
+    border: 1px solid #d5b941;
     border-radius: 30px;
     }
     .widget-newsletter button{
         height: 50px;
     width: 50px;
     border: none;
-    background: #f5b754;
+    background: #d5b941;
     font-size: 16px;
     font-weight: 700;
     color: #1b1b1b;

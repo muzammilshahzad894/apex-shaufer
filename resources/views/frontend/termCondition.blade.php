@@ -4,7 +4,7 @@
 
 
     h1, h2 {
-        color: #f5b754 !important;
+        color: #d5b941 !important;
     }
     p, li {
         color: #ddd;
@@ -15,7 +15,7 @@
         padding-left: 0;
     }
     a {
-        color: #f5b754;
+        color: #d5b941;
         text-decoration: none;
     }
     a:hover {

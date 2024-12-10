@@ -14,7 +14,7 @@
     }
     .minimum_hours{
         font-size: 12px;
-        color: orange;
+        color:#ecd991
 
     }
 
