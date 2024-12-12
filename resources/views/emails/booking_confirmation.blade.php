@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Confirmation</title>
+    <title>Booking Accepted</title>
 </head>
 <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
     <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4;">
@@ -17,9 +17,21 @@
                     </tr>
                     <tr>
                         <td style="background-color: #ef8e1c; padding: 20px; color: #ffffff;">
-                            <h3 style="text-align: center; color: #ffffff;">Your Booking with Bristol Cabwise is Confirmed!</h3>
-                            <p style="color: #ffffff;">Dear {{ $userName }},</p>
-                            <p style="color: #ffffff;">Thank you for choosing Bristol Cabwise for your upcoming journey! We are pleased to confirm your booking:</p>
+                            @if($for_admin)
+                                <h3 style="text-align: center; color: #ffffff;">Booking Accepted</h3>
+                            @else
+                                <h3 style="text-align: center; color: #ffffff;">Your Booking with Bristol Cabwise is Accepted!</h3>
+                            @endif
+                            @if($for_admin)
+                                <p style="color: #ffffff;">Dear Admin,</p>
+                            @else
+                                <p style="color: #ffffff;">Dear {{ $userName }},</p>
+                            @endif
+                            @if($for_admin)
+                                <p style="color: #ffffff;">Please find the booking details below:</p>
+                            @else
+                                <p style="color: #ffffff;">Thank you for choosing Bristol Cabwise for your upcoming journey! We are pleased to confirm your booking:</p>
+                            @endif
                             <h3 style="color: #000000;">Summary:</h3>
                             <table width="100%" cellpadding="10" cellspacing="0" border="1" bordercolor="#dddddd" style="border-collapse: collapse; color: #000000;">
                                 <tr style="background-color: #000000; color: #ffffff;">
@@ -139,14 +151,16 @@
                                     <td style="padding: 10px;">£{{ $is_return ? $fleet_price * 2 : $fleet_price }}</td>
                                 </tr>
                             </table>
-                            <p>If you have any questions or need to make changes to your booking, please don't hesitate to contact us at *0117 332 2782*.</p>
-                            <p>Wishing you a safe and pleasant journey!</p>
-                            <p style="margin-bottom: 0;">
-                                To view our terms and condition, please click on the link given below
-                            </p>
-                            <p style="margin-top: 2px;">
-                                <a href="{{ url('term-condition') }}" style="text-decoration: none;">Terms and Conditions</a>
-                            </p>
+                            @if(!$for_admin)
+                                <p>If you have any questions or need to make changes to your booking, please don't hesitate to contact us at *0117 332 2782*.</p>
+                                <p>Wishing you a safe and pleasant journey!</p>
+                                <p style="margin-bottom: 0;">
+                                    To view our terms and condition, please click on the link given below
+                                </p>
+                                <p style="margin-top: 2px;">
+                                    <a href="{{ url('term-condition') }}" style="text-decoration: none;">Terms and Conditions</a>
+                                </p>
+                            @endif
                         </td>
                     </tr>
                     <tr>

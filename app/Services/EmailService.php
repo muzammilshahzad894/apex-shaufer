@@ -56,43 +56,61 @@ class EmailService
             'fleet_price' => $bookingDetails->fleet_price,
             'is_extra_lauggage' => $extraLaugage,
             'coupon_discount' => $bookingDetails->coupon_discount,
+            'for_admin' => false,
         ];
 
         $emailAddresses = [$user->email];
 
         Mail::to($emailAddresses)->send(new BookingConfirmationMail($data));
         
-        // In EmailSetting all the emails are stored that will receive the booking-confirmation email
-        $emailSetting = EmailSetting::where('receiving_emails', 'like', '%booking-confirmation%')->get();
-        if ($emailSetting->count() > 0) {
-            foreach ($emailSetting as $email) {
-                $dataForAdmin = $data;
-                $dataForAdmin['adminName'] = $email->user_name;
-                
-                $adminEmailAddresses = $email->user_email;
-                Mail::to($adminEmailAddresses)->send(new BookingConfirmationAdminMail($dataForAdmin));
-            }
+        if(setting('admin_email')) {
+            $data['for_admin'] = true;
+            Mail::to(setting('admin_email'))->send(new BookingConfirmationMail($data));
         }
     }
 
     public function sendBookingCancellation($user, $bookingDetails)
     {
-        $data = [
-            'userName' => $user->name,
-            'pickupLocation' => $bookingDetails->pickupLocation,
-            'dropoffLocation' => $bookingDetails->dropoffLocation,
-            'pickupDateTime' => $bookingDetails->pickupDateTime,
-            'dropoffDateTime' => $bookingDetails->dropoffDateTime,
-        ];
-
-        $emailAddresses = [$user->email];
-        // In EmailSetting all the emails are stored that will receive the booking-cancellation email
-        $emailSetting = EmailSetting::where('receiving_emails', 'like', '%booking-cancellation%')->pluck('user_email');
-        if ($emailSetting->count() > 0) {
-            $emailAddresses = array_merge($emailAddresses, $emailSetting->toArray());
+        $extraLaugage = "";
+        if($bookingDetails->is_extra_lauggage == 1) {
+            $extraLaugage = "6";
         }
+        $data = [
+            'bookingId' => $bookingDetails->bookingId,
+            'userName' => $bookingDetails->name,
+            'serviceType' => $bookingDetails->serviceType,
+            'pickupLocation' => $bookingDetails->pickupLocation,
+            'via_locations' => $bookingDetails->via_locations,
+            'dropoffLocation' => $bookingDetails->dropoffLocation,
+            'dateAndTime' => $bookingDetails->dateAndTime,
+            'is_return' => $bookingDetails->is_return,
+            'return_dateAndTime' => $bookingDetails->return_dateAndTime,
+            'name' => $bookingDetails->name,
+            'telephone' => $bookingDetails->telephone,
+            'email' => $bookingDetails->email,
+            'no_of_passenger' => $bookingDetails->no_of_passenger,
+            'is_childseat' => $bookingDetails->is_childseat,
+            'is_meet_greet' => $bookingDetails->is_meet_greet,
+            'no_suit_case' => $bookingDetails->no_suit_case,
+            'no_of_laugage' => $bookingDetails->no_of_laugage,
+            'summary' => $bookingDetails->summary,
+            'other_name' => $bookingDetails->other_name,
+            'other_phone_number' => $bookingDetails->other_phone_number,
+            'other_email' => $bookingDetails->other_email,
+            'fleet_price' => $bookingDetails->fleet_price,
+            'is_extra_lauggage' => $extraLaugage,
+            'coupon_discount' => $bookingDetails->coupon_discount,
+            'for_admin' => false,
+        ];
+        
+        $emailAddresses = [$user->email];
 
         Mail::to($emailAddresses)->send(new BookingCancellationMail($data));
+        
+        if(setting('admin_email')) {
+            $data['for_admin'] = true;
+            Mail::to(setting('admin_email'))->send(new BookingCancellationMail($data));
+        }
     }
 
     public function sendDriverAssign($driver, $bookingDetails)
