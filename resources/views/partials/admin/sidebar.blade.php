@@ -100,7 +100,7 @@
                     </a>
                     <ul aria-expanded="false">
                         <li><a href="{{ route('admin.custom-email.index') }}">Custom Email</a></li>
-                        <li><a href="{{ route('admin.email-settings.index') }}">Email Settings</a></li>
+                        <!-- <li><a href="{{ route('admin.email-settings.index') }}">Email Settings</a></li> -->
                     </ul>
                 </li>
                 <li class="{{ request()->routeIs('admin.settings.index') ? 'mm-active' : '' }}">

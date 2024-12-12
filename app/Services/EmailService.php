@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Mail\BookingConfirmationMail;
 use App\Mail\BookingConfirmationAdminMail;
+use App\Mail\BookingCompleteMail;
 use App\Mail\BookingCancellationMail;
 use App\Mail\BookingReminderMail;
 use App\Mail\ThankYouFeedbackMail;
@@ -66,6 +67,50 @@ class EmailService
         if(setting('admin_email')) {
             $data['for_admin'] = true;
             Mail::to(setting('admin_email'))->send(new BookingConfirmationMail($data));
+        }
+    }
+    
+    public function sendBookingCompleted($user, $bookingDetails)
+    {
+        $extraLaugage = "";
+        if($bookingDetails->is_extra_lauggage == 1) {
+            $extraLaugage = "6";
+        }
+        $data = [
+            'bookingId' => $bookingDetails->bookingId,
+            'userName' => $user->name,
+            'serviceType' => $bookingDetails->serviceType,
+            'pickupLocation' => $bookingDetails->pickupLocation,
+            'via_locations' => $bookingDetails->via_locations,
+            'dropoffLocation' => $bookingDetails->dropoffLocation,
+            'dateAndTime' => $bookingDetails->dateAndTime,
+            'is_return' => $bookingDetails->is_return,
+            'return_dateAndTime' => $bookingDetails->return_dateAndTime,
+            'name' => $bookingDetails->name,
+            'telephone' => $bookingDetails->telephone,
+            'email' => $bookingDetails->email,
+            'no_of_passenger' => $bookingDetails->no_of_passenger,
+            'is_childseat' => $bookingDetails->is_childseat,
+            'is_meet_greet' => $bookingDetails->is_meet_greet,
+            'no_suit_case' => $bookingDetails->no_suit_case,
+            'no_of_laugage' => $bookingDetails->no_of_laugage,
+            'summary' => $bookingDetails->summary,
+            'other_name' => $bookingDetails->other_name,
+            'other_phone_number' => $bookingDetails->other_phone_number,
+            'other_email' => $bookingDetails->other_email,
+            'fleet_price' => $bookingDetails->fleet_price,
+            'is_extra_lauggage' => $extraLaugage,
+            'coupon_discount' => $bookingDetails->coupon_discount,
+            'for_admin' => false,
+        ];
+
+        $emailAddresses = [$user->email];
+
+        Mail::to($emailAddresses)->send(new BookingCompleteMail($data));
+        
+        if(setting('admin_email')) {
+            $data['for_admin'] = true;
+            Mail::to(setting('admin_email'))->send(new BookingCompleteMail($data));
         }
     }
 

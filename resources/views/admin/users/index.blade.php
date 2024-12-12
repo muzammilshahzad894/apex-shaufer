@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="d-flex flex-column mb-4">
-        <h3 class="mb-3">Bookings</h3>
+        <h3 class="mb-3">Accepted Bookings</h3>
         <!-- Filters -->
         <div class="filter">
             <form action="{{ route('admin.confirm.index') }}" method="GET">
