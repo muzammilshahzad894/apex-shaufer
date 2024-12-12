@@ -2,14 +2,14 @@
 {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> --}}
 
 <style>
-    @media (max-width: 767px) {
-       .button-1{
-        padding : 14px 30px !important;
-       }
-       .button-2{
-        padding : 14px 30px !important;
-       }
+  @media (max-width: 767px) {
+    .button-1{
+      padding : 14px 30px !important;
     }
+    .button-2{
+      padding : 14px 30px !important;
+    }
+  }
 </style>
 @section('content')
 <!-- Header Banner -->
@@ -132,17 +132,30 @@
           <h2 class="heading-44-medium mb-60 text-center wow fadeInUp">
             Leave us your info
           </h2>
+          <div class="row">
+              <div class="col-12">
+                  @if(session('success'))
+                      <div class="alert alert-success alert-dismissible fade show" role="alert">
+                          {{ session('success') }}
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                  @endif
+              </div>
+          </div>
           <div class="form-contact form-comment wow fadeInUp">
-            <form>
+            <form action="{{ route('frontend.contactPost') }}" method="post" onsubmit="document.getElementById('submit-btn').innerHTML = 'Please wait...'; document.getElementById('submit-btn').disabled = true;">
+              @csrf
               <div class="row">
                 <div class="col-lg-6 col-md-6">
                   <div class="form-group">
                     <label class="form-label" for="fullname">Full Name</label
                     ><input
+                      name="name"
                       class="form-control"
                       id="fullname"
                       type="text"
                       value=""
+                      required
                     />
                   </div>
                 </div>
@@ -150,32 +163,49 @@
                   <div class="form-group">
                     <label class="form-label" for="email">Email</label
                     ><input
+                      name="email"
                       class="form-control"
                       id="email"
-                      type="text"
+                      type="email"
                       placeholder=""
+                      required
                     />
                   </div>
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-6 col-md-6">
+                  <div class="form-group">
+                    <label class="form-label" for="phone">Phone</label
+                    ><input
+                      name="phone"
+                      class="form-control"
+                      id="phone"
+                      type="text"
+                      placeholder=""
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
                   <div class="form-group">
                     <label class="form-label" for="subject">Subject</label
                     ><input
+                      name="subject"
                       class="form-control"
                       id="subject"
                       type="text"
                       placeholder=""
+                      required
                     />
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="form-group">
                     <label class="form-label" for="message">Message</label
-                    ><textarea class="form-control" id="message"></textarea>
+                    ><textarea name="message" class="form-control" id="message" required></textarea>
                   </div>
                 </div>
                 <div class="col-lg-12">
-                  <button class="btn btn-primary" type="submit">
+                  <button class="btn btn-primary" type="submit" id="submit-btn">
                     Get In Touch<svg
                       class="icon-16 ml-5"
                       fill="none"
