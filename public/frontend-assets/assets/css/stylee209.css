@@ -2873,8 +2873,8 @@ body {
 }
 
 .call-phone {
-  background: url(../imgs/template/icons/call.svg) no-repeat left top 1px;
-  padding-left: 22px;
+  background: url(../imgs/template/icons/call.svg) no-repeat left top 9px;
+  padding-left: 22px !important;
   width: 220px;
 }
 

@@ -48,6 +48,8 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Phone </th>
+                            <th>Service </th>
+                            <th>Fleet </th>
                             <th>Pickup </th>
                             <th class="max-content-display">Via Locations</th>
                             <th>DropOff </th>
@@ -63,6 +65,12 @@
                                     <td>{{ $draft->name }}</td>
                                     <td> {{ $draft->email }}</td>
                                     <td> {{ $draft->phone_number }}</td>
+                                    <td>
+                                        {{ $draft->service->name ?? 'No Service Assigned' }}
+                                    </td>
+                                    <td>
+                                        {{ $draft->fleet->name ?? 'No Fleet Assigned' }}
+                                    </td>
                                     <td> <div class="max-content-display">{{ $draft->pickup_location }} </div></td>
                                     <td>
                                         @if($draft->via_locations)
@@ -90,12 +98,16 @@
                                     <td> {{ formatDate($draft->booking_date) }}</td>
                                     <td> {{ foramtTime($draft->booking_time) }}</td>
                                     <td class="text-nowrap">
-                                        <form action="{{ route('admin.draft.accept', $draft->id) }}" method="POST">
+                                        {{-- <form action="{{ route('admin.draft.accept', $draft->id) }}" method="POST">
                                             @csrf
                                             <button type="submit" class="btn btn-success">Accept</button>
                                         </form>
-                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="document.getElementById('rejectForm').action = '{{ route('admin.draft.reject', $draft->id) }}'">Reject</button>
+                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="document.getElementById('rejectForm').action = '{{ route('admin.draft.reject', $draft->id) }}'">Reject</button> --}}
                                         
+                                        <a href="{{ route('admin.confirm.edit', $draft->id) }}"
+                                            type="button" class="btn btn-primary btn-sm" >
+                                               <i class="fas fa-edit"></i>
+                                           </a>
                                     </td>
                                 </tr>
                             @endforeach

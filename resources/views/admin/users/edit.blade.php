@@ -129,11 +129,10 @@
                                 </div>
                                 @if($booking->is_draft == 1)
                                 <div class="mb-3 col-md-6">
-                                    <label class="form-label" for="is_payment">Payment Status</label>
-                                    <select name="is_payment" class="form-control">
-                                        <option value="">Select Payment</option>
-                                        <option value="0" {{ old('is_paid', $booking->is_payment) == 0 ? 'selected' : '' }}>Unpaid</option>
-                                        <option value="1" {{ old('is_paid', $booking->is_payment) == 1 ? 'selected' : '' }}>Paid</option>
+                                    <label class="form-label" for="is_draft">Booking Request</label>
+                                    <select name="is_draft" class="form-control">
+                                        <option value="0">Accepted</option>
+                                        <option value="2">Rejected</option>
                                     </select>
                                 </div>
                             @endif

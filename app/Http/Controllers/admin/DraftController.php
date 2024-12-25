@@ -29,7 +29,7 @@ class DraftController extends Controller
     public function index(Request $request)
     {
         try {
-            $draftUsers  = Booking::where('is_draft', 1);
+            $draftUsers = Booking::with(['services', 'fleet'])->where('is_draft', 1);
 
             if (isset($request->from_date) && !empty($request->from_date)) {
                 $draftUsers = $draftUsers->where('booking_date', '>=', $request->from_date);
@@ -54,7 +54,7 @@ class DraftController extends Controller
             }
 
             $draftUsers = $draftUsers->paginate(10);
-
+     
             return view('admin.draft.index', compact('draftUsers'));
         } catch (Exception $e) {
             Log::error(__CLASS__ . '::' . __LINE__ . ' Exception: ' . $e->getMessage());

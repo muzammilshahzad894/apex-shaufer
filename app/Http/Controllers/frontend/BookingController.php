@@ -15,9 +15,7 @@ class BookingController extends Controller
 {
     public function getSelectServiceTax(Request $request){
         $servieId = $request->service_id;
-        dd($servieId);
         $serviceTaxes = FleetTax::where('service_id', $request->service_id)->get();
-        dd($serviceTaxes);
         return response()->json($serviceTaxes);
     }
     public function index()
@@ -181,7 +179,7 @@ class BookingController extends Controller
             $booking->flight_name = $request->flight_name;
             $booking->flight_time = $request->flight_time;
             $booking->flight_type = $request->flight_type;
-            $booking->total_price = $total_price;
+            $booking->total_price = "0";
             $booking->service_id = $request->service_id;
             $booking->payment_method = $request->payment_method;
             $booking->is_extra_lauggage = $request->extra_lauggage;

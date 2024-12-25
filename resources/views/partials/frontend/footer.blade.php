@@ -183,8 +183,8 @@
         </div>
         <div class="row mb-40">
           <div class="col-md-4 ">
-            <h3 class=" color-white mb-20 wow fadeInUp">Chaufer Service</h3>
-            <p style="color: white;">Book a service with us to ensure smooth and comfortable travel.</p>
+            <h3 class=" color-white mb-20 wow fadeInUp">Book Your Premium Chauffeur Service Today!            </h3>
+            <p style="color: white;">Experience the ultimate in comfort, luxury, and professionalism with Apex Executive Cars. Whether you’re traveling for business, leisure, or a special occasion, our fleet of high-spec vehicles and expert chauffeurs will ensure your journey is seamless and enjoyable. <br><br>Book now and let us take care of the rest. </p>
           </div>
           <div class="col-md-4  mb-30" style="display: flex;flex-direction:column;align-items:center;">
             <h3 class="color-white mb-20 wow fadeInUp">Quick links</h3>

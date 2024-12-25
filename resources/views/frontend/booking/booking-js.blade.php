@@ -597,24 +597,26 @@
                 <div class="col-md-6 form-container ${index === 0 ? 'selected-fleet' : ''}" data-fleet-name="${fleet.name}" data-fleet-id="${fleet.id}" onclick="selectFleet(this)">
                     <div class="p-6">
                         <img src="/uploads/fleets/${fleet.image}" alt="" />
+                        <div>
                         <strong>${fleet.name}</strong>
                         <p class="about_car">${fleet.about_car}</p>
                         <div style="display: flex; flex-direction: column; justify-content: center;">
                             <div class="d-flex gap-2 align-items-center">
                                 <i class="fa-solid fa-user-group"></i>
-                                <p style="margin-bottom: 0px">Max Users.</p>
+                                <p style="margin-bottom: 0px;font-size:smaller;">Max Users.</p>
                                 <span class="count_fleets">${fleet.max_passengers}</span>
                             </div>
                             <div class="d-flex gap-2 align-items-center">
                                 <i class="fa-solid fa-luggage-cart"></i> 
-                                <p style="margin-bottom: 0;">Max Suitcase.</p>
+                                <p style="margin-bottom: 0;font-size:smaller;">Max Suitcase.</p>
                                 <span class="count_fleets">${fleet.max_suitecases}</span>
                             </div>
                             <div class="d-flex gap-2 align-items-center">
                                 <i class="fa-solid fa-briefcase-medical"></i>
-                                <p style="margin-bottom: 0;">Max Lauggage.</p>
+                                <p style="margin-bottom: 0;font-size:smaller;">Max Lauggage.</p>
                                 <span class="count_fleets">${fleet.max_hand_luggage}</span>
                             </div>
+                        </div>
                         </div>
                     </div>
                     <div class="footer-box d-flex align-items-center">

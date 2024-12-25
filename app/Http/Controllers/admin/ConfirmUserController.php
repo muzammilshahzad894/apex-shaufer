@@ -26,7 +26,8 @@ class ConfirmUserController extends Controller
         $this->emailService = $emailService;
     }
     public function cancel(Request $request){
-        $confirmbookings = Booking::where('is_draft', 2);
+        $confirmbookings = Booking::with(['service', 'fleet'])->where('is_draft', 2);
+        
         $confirmbookings = $confirmbookings->paginate(10);
         return view('admin.users.cancel', compact('confirmbookings'));
     }
@@ -40,7 +41,8 @@ class ConfirmUserController extends Controller
     public function index(Request $request)
     {
         try {
-            $draftUsers = Booking::where('is_draft', '=', 0);
+            $draftUsers = Booking::with(['service', 'fleet'])->where('is_draft', '=', 0);
+            
             $drivers = User::where('role', 'driver')->get();
             $statuses = Status::all();
 
@@ -218,16 +220,13 @@ class ConfirmUserController extends Controller
      $booking->is_extra_lauggage = $request->is_extra_lauggage ? 1:0;
      $booking->is_childseat = $request->is_childseat ? 1 : 0;
      $booking->is_meet_nd_greet = $request->is_meet_nd_greet ? 1: 0;
-     if($request->is_payment == 1){
-         $booking->is_draft = 0;
-         $booking->is_payment = 1;
-     }
- 
+     $booking->is_draft = $request->is_draft;
      $booking->save();
- 
-
-
+     if($request->is_draft == 0){
         return redirect()->route('admin.confirm.index', $booking->id)->with('success', 'Booking updated successfully.');
+     }else{
+        return redirect()->route('admin.confirm.cancel', $booking->id)->with('success', 'Booking updated successfully.');
+     }
     }
     public function bookingcomplete($id)
     {

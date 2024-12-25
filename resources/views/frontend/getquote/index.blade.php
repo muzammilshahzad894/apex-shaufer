@@ -1,12 +1,16 @@
 @extends('layouts.frontend.app')
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 
 <style>
+    .icon_text{
+        display: flex;
+        gap: 5px;
+    }
     .alert-success{
         background: green !important;
-        color: white !important;
-    }
-    .custom_lable{
         color: white !important;
     }
     .design_style{
@@ -17,6 +21,13 @@
     .description{
         font-size: 17px !important;
         font-weight: 500 !important;
+    }
+    .custom_lable{
+        color: black;
+        margin-bottom: 5px;
+    }
+    .form-control:focus, .form-control.filled{
+        border-color: #f0dd94 !important;
     }
 
 </style>
@@ -34,14 +45,14 @@
 
 @section('content')
     <section class="banner-header section-padding bg-img" data-overlay-dark="4"
-        data-background="{{ asset('frontend-assets/img/slider/booking_img.png') }}">
+        data-background="{{ asset('frontend-assets/img/slider/quote.webp') }}">
         <div class="v-middle">
             <div class="container">
                 <div class="row design_style">
-                    <div class="col-lg-6 col-md-12 mt-30">
+                    <div class="col-lg-8 col-md-12 mt-30" style="background: rgb(0 0 0 / 42%);padding-bottom:20px;">
                         <div class="post-wrapper">
                         </div>
-                        <h1 style="color: orange">Get A Quotation Here.</h1>
+                        <h1 style="color: #ffe079">Get A Quotation Here.</h1>
                         <p class="description" style="color: white">Get a quotation here for our 24-hour cab service in Bristol and across the UK. Fill out the details, and our representative will contact you promptly with pricing information.</p>
                     </div>
                 </div>
@@ -108,14 +119,14 @@
                         </div>
                         <div class="col-md-12">
                             <label class="custom_lable" for="date">Date & Time</label>
-                            <input name="date" type="datetime-local" value="{{ old('date') }}" class="input location styled-input timepicker border-radius-0 mb-0" placeholder="Date">
+                            <input name="date" type="datetime-local" value="'2024-12-08T14:30" id="date-time" class="form-control input location styled-input timepicker border-radius-0 mb-0" placeholder="Date">
                             @if ($errors->has('date'))
                                 <span class="text-danger">{{ $errors->first('date') }}</span>
                             @endif
                         </div>
                         <div class="col-md-12">
                             <label for="fleet_id">Select Fleet</label>
-                            <select name="fleet_id" id="fleet_id" class="styled-input border-radius-0 mb-0 select select2">
+                            <select name="fleet_id" id="fleet_id" class="form-control styled-input border-radius-0 mb-0 select select2">
                                 <option value="">Select Fleet</option>
                                 @foreach ($fleets as $service)
                                     <option value="{{ $service->id }}" {{ old('fleet_id') == $service->id ? 'selected' : '' }}>
@@ -172,7 +183,7 @@
                         </div>
                         <div class="col-md-12">
                             <label class="custom_lable" for="return_journey">Return Journey</label>
-                            <select name="return_journey" id="return_journey" class="styled-input border-radius-0 mb-0 select select2">
+                            <select name="return_journey" id="return_journey" class="form-control">
                                 <option value="0" {{ old('return_journey') == '0' ? 'selected' : '' }}>No</option>
                                 <option value="1" {{ old('return_journey') == '1' ? 'selected' : '' }}>Yes</option>
                             </select>
@@ -193,7 +204,7 @@
                     </form>
 
                 </div>
-                <div class="col-md-4" style="border-left: 1px solid #ccc">
+                <div class="col-md-4" style="border-left: 1px solid #ccc;background:#ead58e;">
 
                     <h3 class="color color_theme">Location</h3>
 
@@ -290,8 +301,21 @@
             }
         });
     </script>
+    <script>
+        document.getElementById('date-time').addEventListener('click', function() {
+            this.showPicker(); // Opens the native datetime picker
+        });
+    </script>
+   <script>
+    flatpickr("#date-time", {
+        enableTime: true,
+        dateFormat: "Y-m-d\\TH:i",
+        time_24hr: false,
+        minDate: "today" // Disables all previous dates
+    });
+</script>
+    {{-- @include('frontend.booking.style-css') --}}
 @endsection
 
 @section('scripts')
-    @include('frontend.booking.style-css')
 @endsection

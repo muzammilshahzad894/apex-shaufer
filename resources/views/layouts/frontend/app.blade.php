@@ -53,7 +53,7 @@
 	<script src="{{ asset('frontend-assets/js/imagesloaded.pkgd.min.js') }}"></script>
 	<script src="{{ asset('frontend-assets/js/jquery.isotope.v3.0.2.js') }}"></script>
 	<script src="{{ asset('frontend-assets/js/popper.min.js') }}"></script>
-  @if (Request::is('book-online'))
+  @if (Request::is('book-online') || Request::is('get-quote') )
     <script src="{{ asset('frontend-assets/js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('frontend-assets/js/jquery.waypoints.min.js') }}"></script>
 	<script src="{{ asset('frontend-assets/js/jquery.magnific-popup.js') }}"></script>

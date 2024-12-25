@@ -1,4 +1,7 @@
 <style>
+    #fleets-section{
+        gap: 10px;
+    }
     .icon_text p{
         color: white !important;
     }
@@ -12,7 +15,7 @@
         color: black;
     }
     .fa-solid, .fas{
-        color:#ecd991
+        color:#ffd63c;
     }
     .count_fleets{
         color: white !important;
@@ -79,6 +82,7 @@
     .modal-body {
         padding: 20px;
         background: #000;
+        border: 1px solid;
     }
 
     .modal {
@@ -86,12 +90,12 @@
     }
 
     .modal-header {
-        background-color:#ecd991
+        background-color:#ffd63c;
 
     }
 
     #countdown h4 {
-        color:#ecd991
+        color:#ffd63c;
         font-family: cursive;
     }
 
@@ -172,17 +176,18 @@
     .p-6 {
         padding: 10px 10px 0 10px;
         height: 89%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
     }
 
     .form-container {
         background-color: black;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        /* padding: 20px; */
         margin-bottom: 20px;
-        /* Adjust as needed */
         margin-right: 10px;
-        max-width: 225px;
+        max-width: 300px;
     }
 
     .main-div {
@@ -335,8 +340,8 @@
     }
 
     .p-6 img {
-        height: 200px;
-        width: 100%;
+        height: 100px;
+        width: 100px;
         border-radius: 50%;
     }
 
@@ -349,7 +354,7 @@
         width: 46px;
         height: 10px;
         background-color: #d5b941;
-        border-radius: 25%;
+        /* border-radius: 25%; */
     }
 
     .payment_section {
@@ -389,9 +394,9 @@
     }
 
     .summary strong {
-        color:#ecd991
+        color:#ffd63c; !important;
         /* Set strong tag color to orange */
-        min-width: 134px;
+        /* min-width: 134px; */
         /* Set minimum width for strong tag */
     }
 
@@ -404,7 +409,7 @@
 
     .icon_text i {
         color: white;
-        background:#ecd991
+        background:#ffd63c;
         padding: 5px;
         border-radius: 14px;
     }
@@ -688,7 +693,7 @@
         }
 
         .dropdown_menus {
-            color:#ecd991
+            color:#ffd63c;
             font-size: 20px;
             font-weight: 600;
             padding: 20px 0px 0px 0px;
@@ -699,6 +704,11 @@
         @media screen and (max-width: 768px) {
             .date-time-picker {
                 width: 100%;
+            }
+
+            .new_form{
+                padding: 10px !important;
+                max-width: unset !important;
             }
             .payment_section{
                 padding: 0px;
@@ -718,7 +728,8 @@
 
         @media (max-width: 768px) {
             .form-container {
-                max-width: 280px !important;
+                max-width: 100% !important;
+                min-width: 320px;
             }
 
             .column_type {

@@ -16,6 +16,8 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Phone </th>
+                            <th>Service </th>
+                            <th>Fleet </th>
                             <th>Pickup </th>
                             <th class="max-content-display">Via Locations</th>
                             <th>DropOff </th>
@@ -33,6 +35,12 @@
                                     <td>{{ $draft->name }}</td>
                                     <td>{{ $draft->email }}</td>
                                     <td>{{ $draft->phone_number }}</td>
+                                    <td>
+                                        {{ $draft->service->name ?? 'No Service Assigned' }}
+                                    </td>
+                                    <td>
+                                        {{ $draft->fleet->name ?? 'No Fleet Assigned' }}
+                                    </td>
                                     <td> <div class="max-content-display">{{ $draft->pickup_location }}</div></td>
                                     <td>
                                          <div class="max-content-display">

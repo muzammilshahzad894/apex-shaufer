@@ -37,8 +37,17 @@
                                     href="{{ route('frontend.contact') }}">Contact</a></li>
                             <li><a class="{{ request()->routeIs('frontend.faqs') ? 'active' : '' }}"
                                     href="{{ route('frontend.faqs') }}">FAQs</a></li>
+                            <li> <a href="{{ route('frontend.book-online') }}" class="btn btn-default hover-up">Book Now</a></li>
+                            <li style="display: flex;justify-content:center;"> 
+                                <div class="header-right">
+                                        <a
+                                        class="text-14-medium call-phone color-white hover-up" href="tel:+41227157000">+41 22 715
+                                        7000</a>
+                                    </div>
+                            </li>
+                                   
                             @guest
-                                <li class="nav-item"><a
+                                <li class=""><a
                                         class="nav-link {{ request()->routeIs('frontend.login') || request()->routeIs('frontend.signup') ? 'active' : '' }}"
                                         href="/login">Login</a></li>
                             @endguest
@@ -71,12 +80,7 @@
                     <div class="burger-icon burger-icon-white"><span class="burger-icon-mid"></span><span
                             class="burger-icon-bottom"></span></div>
                 </div>
-                <div class="header-right">
-                    <a href="{{ route('frontend.book-online') }}" class="btn btn-default hover-up">Book Now</a>
-                </div>
-                <div class="d-xxl-none d-inline-block align-middle number" style="width: 220px;"><a
-                        class="text-14-medium call-phone color-white hover-up" href="tel:+41227157000">+41 22 715
-                        7000</a></div>
+               
                 <div class="burger-icon burger-icon-white d-xxl-none"><span class="burger-icon-mid"></span><span
                         class="burger-icon-bottom"></span></div>
 
@@ -103,6 +107,42 @@
                                     href="{{ route('frontend.faqs') }}">FAQs</a></li>
                             <li><a class="{{ request()->routeIs('frontend.trustVoilet') ? 'active' : '' }}"
                                     href="{{ route('frontend.trustVoilet') }}">Reviews</a></li>
+                                    <li > 
+                                        <div class="header-right">
+                                                <a
+                                                class="text-14-medium call-phone color-white hover-up"
+                                                style="font-size: larger !important;font-weight:700 !important;color:black !important;margin-left:-22px !important;" href="tel:+41227157000">+41 22 715
+                                                7000</a>
+                                            </div>
+                                    </li>
+                                    @guest
+                                        <li class=""><a
+                                                class=" {{ request()->routeIs('frontend.login') || request()->routeIs('frontend.signup') ? 'active' : '' }}"
+                                                href="/login">Login</a></li>
+                                    @endguest
+        
+                                    @auth
+                                        <li class="has-children">
+                                            <a id="" class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                {{ \Illuminate\Support\Str::limit(Auth::user()->name, 6, '...') }}
+                                            </a>
+                                            
+                                            <ul class="sub-menu">
+                                                <li> <a class="dropdown-item" href="{{ route('frontend.userHistory') }}">
+                                                        {{ __('My Bookings') }}
+                                                    </a></li>
+                                              
+                                                <li>
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                        class="">
+                                                        @csrf
+                                                        <button type="submit" class="dropdown-item">Logout</button>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    @endauth
+                                  
                         </ul>
                     </nav>
                 </div>

@@ -98,7 +98,9 @@
     --width: 17.5rem;
     --height: 5rem;
 }
-
+[data-sidebar-position="fixed"][data-layout="vertical"] .dlabnav .dlabnav-scroll{
+    padding-bottom: 120px;
+}
 .auth-form .btn {
     height: 3.125rem;
     font-weight: 700;
