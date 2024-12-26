@@ -223,8 +223,14 @@ class ConfirmUserController extends Controller
      $booking->is_draft = $request->is_draft;
      $booking->save();
      if($request->is_draft == 0){
+        $bookingDetails = $this->getBookingDetailsForEmail($booking->id);
+        $user = User::find($booking->user_id);
+        $this->emailService->sendBookingConfirmation($user, $bookingDetails);
         return redirect()->route('admin.confirm.index', $booking->id)->with('success', 'Booking updated successfully.');
      }else{
+        $bookingDetails = $this->getBookingDetailsForEmail($booking->id);
+        $user = User::find($booking->user_id);
+        $this->emailService->sendBookingCancellation($user, $bookingDetails);
         return redirect()->route('admin.confirm.cancel', $booking->id)->with('success', 'Booking updated successfully.');
      }
     }
@@ -274,5 +280,46 @@ class ConfirmUserController extends Controller
         
         $this->emailService->sendBookingCompleted($user, $bookingDetails);
         return redirect()->route('admin.confirm.index', $booking->id)->with('success', 'Booking completed successfully.');
+    }
+    
+    public function getBookingDetailsForEmail($bookingId)
+    {
+        $booking = Booking::findOrFail($bookingId);
+        $user = User::find($booking->user_id);
+        if($booking->return_id){
+            $returnBooking = Booking::find($booking->return_id);
+        }
+        $couponDiscount = UsedCoupon::where('user_id', $user->id)->first();
+        $coupon = null;
+        if($couponDiscount){
+            $coupon = Coupon::where('id', $couponDiscount->coupon_id)->first(); 
+        }
+        $bookingDetails = (object) [
+            'bookingId' => $booking->id,
+            'serviceType' => $booking->service->name,
+            'pickupLocation' => $booking->return_id ? $returnBooking->pickup_location : $booking->pickup_location,
+            'via_locations' => $booking->via_locations ? json_decode($booking->via_locations) : [],
+            'dropoffLocation' => $booking->return_id ? $returnBooking->dropoff_location : $booking->dropoff_location,
+            'dateAndTime' => $booking->return_id ? formatDate($returnBooking->booking_date) . ' ' . foramtTime($returnBooking->booking_date) : formatDate($booking->booking_date) . ' ' . foramtTime($booking->booking_time),
+            'is_return' => $booking->return_id ? true : false,
+            'return_dateAndTime' => $booking->return_id ? formatDate($booking->booking_date) . ' ' . foramtTime($booking->booking_time) : null,
+            'name' => $booking->name,
+            'telephone' => $booking->phone_number,
+            'email' => $booking->email,
+            'no_of_passenger' => $booking->no_of_passenger,
+            'is_childseat' => $booking->is_childseat ? $booking->is_childseat : '-',
+            'is_meet_greet' => $booking->is_meet_greet ? 'Yes' : '-',
+            'no_suit_case' => $booking->no_suit_case,
+            'no_of_laugage' => $booking->no_of_laugage,
+            'summary' => $booking->summary ? $booking->summary : '-',
+            'other_name' => $booking->other_name ? $booking->other_name : '-',
+            'other_phone_number' => $booking->other_phone_number ? $booking->other_phone_number : '-',
+            'other_email' => $booking->other_email ? $booking->other_email : '-',
+            'fleet_price' => $booking->total_price,
+            'is_extra_lauggage' => $booking->is_extra_lauggage ? 'Yes' : '-',
+            'coupon_discount' => $coupon ? $coupon->discount : 0,
+        ];
+        
+        return $bookingDetails;
     }
 }

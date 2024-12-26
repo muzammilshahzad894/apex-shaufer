@@ -10,6 +10,8 @@ use Illuminate\Queue\SerializesModels;
 class BookingCancellationMail extends Mailable
 {
     use Queueable, SerializesModels;
+    
+    public $data;
 
     /**
      * Create a new message instance.
