@@ -1,13 +1,22 @@
 @extends('layouts.frontend.app')
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
 
 
 <style>
     .icon_text{
         display: flex;
         gap: 5px;
+    }
+    #submit{
+    padding: 10px 30px;
+    background: #ead58e;
+    border: none;
+    color: white;
+    }
+    .form-control {
+        padding: 12px !important;
     }
     .alert-success{
         background: green !important;
@@ -28,6 +37,7 @@
     }
     .form-control:focus, .form-control.filled{
         border-color: #f0dd94 !important;
+       
     }
 
 </style>
@@ -52,8 +62,8 @@
                     <div class="col-lg-8 col-md-12 mt-30" style="background: rgb(0 0 0 / 42%);padding-bottom:20px;">
                         <div class="post-wrapper">
                         </div>
-                        <h1 style="color: #ffe079">Get A Quotation Here.</h1>
-                        <p class="description" style="color: white">Get a quotation here for our 24-hour cab service in Bristol and across the UK. Fill out the details, and our representative will contact you promptly with pricing information.</p>
+                        <h1 style="color: #ffe079">Request a Quote</h1>
+                        <p class="description" style="color: white">Get a personalized quotation for our 24-hour chauffeur hire service in Bristol and across the UK. Simply provide your details, and one of our representatives will reach out to you promptly with tailored pricing information.</p>
                     </div>
                 </div>
             </div>
@@ -119,9 +129,23 @@
                         </div>
                         <div class="col-md-12">
                             <label class="custom_lable" for="date">Date & Time</label>
-                            <input name="date" type="datetime-local" value="'2024-12-08T14:30" id="date-time" class="form-control input location styled-input timepicker border-radius-0 mb-0" placeholder="Date">
+                            <input name="date" type="datetime-local" value="{{ date('Y-m-d\TH:i') }}" id="date-time" class="form-control   border-radius-0 mb-0" placeholder="Date">
                             @if ($errors->has('date'))
                                 <span class="text-danger">{{ $errors->first('date') }}</span>
+                            @endif
+                        </div>
+                        <div class="col-md-12">
+                            <label for="service_id">Select Service</label>
+                            <select name="service_id" id="service_id" class="form-control styled-input border-radius-0 mb-0 select select2">
+                                <option value="">Select Service</option>
+                                @foreach ($services as $service)
+                                    <option value="{{ $service->id }}" {{ old('service') == $service->id ? 'selected' : '' }}>
+                                        {{ $service->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @if ($errors->has('service'))
+                                <span class="text-danger">{{ $errors->first('service_id') }}</span>
                             @endif
                         </div>
                         <div class="col-md-12">
@@ -135,7 +159,7 @@
                                 @endforeach
                             </select>
                             @if ($errors->has('service'))
-                                <span class="text-danger">{{ $errors->first('service') }}</span>
+                                <span class="text-danger">{{ $errors->first('fleet_id') }}</span>
                             @endif
                         </div>
                         <div class="col-md-12">

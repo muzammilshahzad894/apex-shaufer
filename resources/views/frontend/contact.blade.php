@@ -130,7 +130,7 @@
       <div class="container-sub">
         <div class="mw-770">
           <h2 class="heading-44-medium mb-60 text-center wow fadeInUp">
-            Leave us your info
+          Get In Touch
           </h2>
           <div class="row">
               <div class="col-12">
@@ -206,7 +206,7 @@
                 </div>
                 <div class="col-lg-12">
                   <button class="btn btn-primary" type="submit" id="submit-btn">
-                    Get In Touch<svg
+                  Submit<svg
                       class="icon-16 ml-5"
                       fill="none"
                       stroke="currentColor"

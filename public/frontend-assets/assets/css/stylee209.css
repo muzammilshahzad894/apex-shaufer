@@ -6056,7 +6056,7 @@ footer a {
 
 .box-pagination-fleet {
   position: relative;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 
 .swiper-button-prev-fleet {

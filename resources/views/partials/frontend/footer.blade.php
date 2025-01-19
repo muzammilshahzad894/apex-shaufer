@@ -174,7 +174,7 @@
         <div class="box-footer-top">
           <div class="row align-items-center">
             <div class="col-lg-6 col-md-6 text-md-start text-center mb-15 wow fadeInUp">
-              <div class="d-flex align-items-center justify-content-md-start justify-content-center"><a class="mr-30" href="{{ route('frontend.index') }}"><img style="max-height: 70px;max-width:150px;" src="{{ asset('frontend-assets/img/logo-light.png') }}" alt="Luxride"></a><a class="text-14-medium call-phone color-white hover-up" href="tel:+41227157000">+41 22 715 7000</a></div>
+              <div class="d-flex align-items-center justify-content-md-start justify-content-center"><a class="mr-30" href="{{ route('frontend.index') }}"><img style="max-height: 70px;max-width:150px;" src="{{ asset('frontend-assets/img/logo-light.png') }}" alt="Luxride"></a><a class="text-14-medium call-phone color-white hover-up" href="tel:+01173322782">+01173322782</a></div>
             </div>
             <div class="col-lg-6 col-md-6 text-md-end text-center mb-15 wow fadeInUp">
               <div class="d-flex align-items-center justify-content-md-end justify-content-center"><span class="text-18-medium color-white mr-10">Follow Us</span><a class="icon-socials icon-facebook" href="#"></a><a class="icon-socials icon-twitter" href="#"></a><a class="icon-socials icon-instagram" href="#"></a><a class="icon-socials icon-linkedin" href="#"></a></div>
@@ -183,7 +183,7 @@
         </div>
         <div class="row mb-40">
           <div class="col-md-4 ">
-            <h3 class=" color-white mb-20 wow fadeInUp">Book Your Premium Chauffeur Service Today!            </h3>
+            <h3 class=" color-white mb-20 wow fadeInUp">Book Your Premium chauffeur Service Today!            </h3>
             <p style="color: white;">Experience the ultimate in comfort, luxury, and professionalism with Apex Executive Cars. Whether you’re traveling for business, leisure, or a special occasion, our fleet of high-spec vehicles and expert chauffeurs will ensure your journey is seamless and enjoyable. <br><br>Book now and let us take care of the rest. </p>
           </div>
           <div class="col-md-4  mb-30" style="display: flex;flex-direction:column;align-items:center;">
@@ -224,7 +224,7 @@
       <div class="container-sub">
         <div class="footer-bottom">
           <div class="row align-items-center">
-            <div class="col-lg-8 col-md-12 text-center text-lg-start"><span class="text-14 color-white mr-50">© 2024 CHAUFER SERVICE</span>
+            <div class="col-lg-8 col-md-12 text-center text-lg-start"><span class="text-14 color-white mr-50">© 2024 CHAUFFEUR SERVICE</span>
               
             </div>
           </div>

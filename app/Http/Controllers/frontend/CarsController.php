@@ -17,7 +17,6 @@ class CarsController extends Controller
     public function index()
     {
         try {
-            
          
             $services = Service::all();
             $coupon = Coupon::where('public', 'public')->latest()->first();

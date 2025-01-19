@@ -13,6 +13,7 @@
 
     .banner-header {
         min-height: 520px;
+        
     }
 
     .offer_img {
@@ -153,7 +154,7 @@
 @section('content')
     <!-- Header Banner -->
     <section class="banner-header section-padding bg-img" data-overlay-dark="4"
-        data-background="{{ asset('frontend-assets/img/slider/3.jpg') }}">
+        data-background="{{ asset('frontend-assets/img/slider/aboutus.png') }}">
         <div class="v-middle">
             <div class="container">
                 <div class="row">
@@ -179,16 +180,15 @@
                 <div class="section-subtitle"></div>
                 <h4 class="section-title">
                     <div class="custom-title">
-                        Pre-Booking Cab Service in Bristol
+                    Apex Executive Cars
+
                     </div>
                     <span class="custom-subtitle">
-                        Across the United Kingdom
+                    Luxury Chauffeur Hire Services 
                     </span>
                 </h4>
                 <p class="_padding">
-                    Welcome to our premier pre-booking cab service, serving Bristol and cities across the United
-                    Kingdom. We offer a range of transportation solutions tailored to your needs, ensuring comfort,
-                    convenience, and reliability at affordable rates.
+                Exceptional Chauffeur Hire and Airport Transfer services for Corporate Clients and Private individuals in Bristol and surrounding areas.
                 </p>
             </div>
             <div class="">
@@ -198,30 +198,28 @@
                             <div class="" style="width:100%; justify-content:center; padding:20px 0px">
                                 <h4 class="section-title">
                                     <div class="custom-title">
-                                        Our Story – The Family 
+                                    About Apex Executive 
                                     </div>
                                     <span class="custom-subtitle">
-                                        Business
+                                    Cars
                                     </span>
                                 </h4>
-                                {{-- <h4 class="section-title">Our Story – The Family <span> Business</span></h4> --}}
                             </div>
                             <div class="section-text">
-                                <p class="highlight">At Bristol Cabwise, we pride ourselves on providing an exceptional door-to-door cab service focused on comfort, reliability, and customer satisfaction. Our fleet features a range of top-tier executive and comfort vehicles, all driven by experienced chauffeurs dedicated to ensuring each journey is smooth and enjoyable.</p>
-                                
+                                <p class="highlight">At Apex Executive Cars, we pride ourselves on delivering a premium chauffeur-driven experience defined by luxury, professionalism, and reliability. Our impressive fleet features some of the finest executive vehicles on the market, including the Mercedes E-Class, Mercedes S-Class, BMW 7 Series and the spacious Mercedes V-Class, all meticulously maintained to ensure the highest standards of comfort, safety, and style. Whether you’re traveling for business or leisure, our experienced chauffeurs are dedicated to making every journey smooth, punctual, and memorable.</p>
+                                <br>
                                 <p class="highlight">
-                                    <span class="inner-title">Founded in 2022,</span> Bristol Cabwise was established with the goal of delivering premium transportation solutions tailored to the needs of professionals, tourists, local residents, and anyone seeking a dependable pre-booked cab service. Starting with a modest fleet, including a Mercedes E-Class, a Mercedes Vito, and a VW Transporter, we began with just two skilled drivers. From day one, our commitment to excellence was clear, as we strived to offer a safe, comfortable, and efficient travel experience for our clients.
+                                    <span class="inner-title">Founded in 2024,</span>Apex Executive Cars was created to cater to the growing demand for high-end transportation services. Starting with a small but select fleet, our vision was to provide clients with a first-class travel experience that combines sophistication, efficiency, and exceptional customer service. Over the years, we’ve grown steadily, adding more luxury vehicles to our lineup to meet the evolving needs of our clients. Today, we are proud to offer a diverse fleet that caters to individuals, groups, corporate clients, and special occasions alike.
+                                </p>
+                                <br>
+                                <p>Our services are tailored to meet the varied needs of our clients, including Executive Transfers for Corporate Professionals, reliable Airport Transfers to ensure stress-free travel, Private Chauffeur Hire for Leisure Trips and Special Occasions, Event Transportation for Weddings and VIP functions, and City-To-City Transfers designed for comfort and efficiency. No matter the purpose of your journey, we are committed to delivering a seamless, luxurious, and highly personalized experience.</p>
+                                <br>
+                                <p>From the refined elegance of the Mercedes S-Class, ideal for executive or VIP travel, to the spacious versatility of the Mercedes V-Class for family or group journeys, every vehicle in our fleet is maintained to the highest standards, offering plush interiors, advanced technology, and unrivaled comfort. Our chauffeurs are experienced professionals who combine exceptional driving expertise with the utmost discretion and attention to detail, ensuring an unparalleled travel experience.</p>
+                                <br>
+                                <p>Whether you’re planning a Business Trip, attending an Event, or simply want to travel in luxury, Apex Executive Cars is your trusted partner in delivering sophisticated, reliable, and memorable chauffeur-driven transportation. Book your next journey with us and experience the difference.
                                 </p>
                                 
-                                <p>Our unwavering dedication to quality quickly earned us the trust of our customers, leading to a steady increase in demand for our services. As a result, we've expanded both our fleet and team. Today, Bristol Cabwise operates a wide range of executive and comfort vehicles, all maintained to the highest standards to ensure safety, reliability, and comfort for our clients.</p>
-                                
-                                <p>We offer a comprehensive selection of services designed to meet the diverse needs of our clients. These include city-to-city transfers, airport pick-ups and drop-offs, private journeys, business transfers, and event transportation. We also specialize in bespoke services for private tours, corporate events, and special occasions. Whether you're traveling for business, leisure, or any other purpose, we have the perfect transportation solution for you.</p>
-                                
-                                <p>Our easy-to-use pre-booking system allows customers to secure their rides with just a few clicks, and our dedicated team is available around the clock to provide exceptional service. We offer competitive rates, without ever compromising on the quality of our service.</p>
-                                
-                                <p class="highlight">At Bristol Cabwise, our mission is to make every journey an enjoyable and memorable experience. We believe that transportation should be more than just getting from point A to point B – it should be something you look forward to. As we continue to grow, we remain committed to providing reliable, comfortable, and high-quality transportation services that our clients can trust.</p>
-                                
-                                <p>Book your ride with Bristol Cabwise today and discover the convenience, comfort, and reliability that has made us the preferred choice for many. Let us take you where you need to go, with confidence, comfort, and style.</p>
+                               
                             </div>
                             
                         </div>
@@ -337,52 +335,48 @@
                     @endforeach
                 </div>
 
-                <section class="section mt-20 pt-120 pb-20 bg-primary bg-how-it-works" >
-                    <div class="container-sub">
-                        <h2 class="heading-44-medium color-white mb-60 wow fadeInUp">How It Works</h2>
-                        <div class="row">
-                            <div class="col-lg-6 order-lg-last">
-                                <div class="box-main-slider">
-                                    <div class="detail-gallery wow fadeInUp">
-                                        <div class="main-image-slider">
-                                            <figure><img
-                                                    src="{{ asset('frontend-assets/assets/imgs/page/homepage1/laptop.png') }}"
-                                                    alt="luxride"></figure>
-                                            <figure><img
-                                                    src="{{ asset('frontend-assets/assets/imgs/page/homepage1/desktop.png') }}"
-                                                    alt="luxride"></figure>
-                                            <figure><img
-                                                    src="{{ asset('frontend-assets/assets/imgs/page/homepage1/desktop2.png') }}"
-                                                    alt="luxride"></figure>
-                                        </div>
-                                    </div>
+                <section class="section  pb-20 bg-primary bg-how-it-works" style="padding-top: 30px;">
+            <div class="container-sub">
+                <h2 class="heading-44-medium color-white mb-60 wow fadeInUp">Reservation Steps </h2>
+                <div class="row">
+                    <div class="col-lg-6 order-lg-last">
+                        <div class="box-main-slider">
+                            <div class="detail-gallery wow fadeInUp">
+                                <div class="main-image-slider">
+                                    <figure><img src="{{ asset('frontend-assets/assets/imgs/page/homepage1/laptop.png') }}"
+                                            alt="luxride"></figure>
+                                    <figure><img
+                                            src="{{ asset('frontend-assets/assets/imgs/page/homepage1/desktop.png') }}"
+                                            alt="luxride"></figure>
+                                    <figure><img
+                                            src="{{ asset('frontend-assets/assets/imgs/page/homepage1/desktop2.png') }}"
+                                            alt="luxride"></figure>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 order-lg-first justify-content-between position-z3 wow fadeInUp">
-                                <ul class="slider-nav-thumbnails list-how">
-                                    <li> <span class="line-white"></span>
-                                        <h4 class="text-20-medium mb-20">Create Your Route</h4>
-                                        <p class="text-16">Enter your pickup & dropoff locations or the number of hours you
-                                            wish to
-                                            book a car and driver for</p>
-                                    </li>
-                                    <li> <span class="line-white"></span>
-                                        <h4 class="text-20-medium mb-20">Choose Vehicle For You</h4>
-                                        <p class="text-16">On the day of your ride, you will receive two email and SMS
-                                            updates -
-                                            one informing you that.</p>
-                                    </li>
-                                    <li> <span class="line-white"></span>
-                                        <h4 class="text-20-medium mb-20">Enjoy The Journey</h4>
-                                        <p class="text-16">After your ride has taken place, we would appreciate it if you
-                                            could
-                                            rate your car and driver.</p>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
-                </section>
+                    <div class="col-lg-6 order-lg-first justify-content-between position-z3 wow fadeInUp">
+                        <ul class="slider-nav-thumbnails list-how">
+                            <li> <span class="line-white"></span>
+                                <h4 class="text-20-medium mb-20">Get A Quote</h4>
+                                <p class="text-16">Select your destination, preferred time, and service type from our
+                                    easy-to-use booking system.</p>
+                            </li>
+                            <li> <span class="line-white"></span>
+                                <h4 class="text-20-medium mb-20">Choose Your Vehicle</h4>
+                                <p class="text-16">Pick from our luxurious fleet to match your style and travel needs.
+                                    Provide your contact details to proceed.</p>
+                            </li>
+                            <li> <span class="line-white"></span>
+                                <h4 class="text-20-medium mb-20">Confirm Your Journey</h4>
+                                <p class="text-16">Review your booking summary. Our team will contact you to finalize
+                                    payment and confirm your ride. Sit back and enjoy the journey!</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
                 {{-- <div class="d-flex text-center" style="width:100%; justify-content:center; padding:20px 0px">
                     <h4 class="section-title">Why Choose <span>Us</span></h4>
                 </div>

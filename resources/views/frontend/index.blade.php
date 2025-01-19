@@ -234,7 +234,7 @@
         </section>
         <section class="section  pb-20 bg-primary bg-how-it-works" style="padding-top: 30px;">
             <div class="container-sub">
-                <h2 class="heading-44-medium color-white mb-60 wow fadeInUp">How It Works</h2>
+                <h2 class="heading-44-medium color-white mb-60 wow fadeInUp">Reservation Steps </h2>
                 <div class="row">
                     <div class="col-lg-6 order-lg-last">
                         <div class="box-main-slider">
@@ -255,7 +255,7 @@
                     <div class="col-lg-6 order-lg-first justify-content-between position-z3 wow fadeInUp">
                         <ul class="slider-nav-thumbnails list-how">
                             <li> <span class="line-white"></span>
-                                <h4 class="text-20-medium mb-20">Book Your Ride</h4>
+                                <h4 class="text-20-medium mb-20">Get A Quote</h4>
                                 <p class="text-16">Select your destination, preferred time, and service type from our
                                     easy-to-use booking system.</p>
                             </li>
@@ -265,7 +265,7 @@
                                     Provide your contact details to proceed.</p>
                             </li>
                             <li> <span class="line-white"></span>
-                                <h4 class="text-20-medium mb-20">Confirm & Relax</h4>
+                                <h4 class="text-20-medium mb-20">Confirm Your Journey</h4>
                                 <p class="text-16">Review your booking summary. Our team will contact you to finalize
                                     payment and confirm your ride. Sit back and enjoy the journey!</p>
                             </li>
@@ -358,7 +358,7 @@
                 </div>
             </div>
         </section>
-        <section class="section pt-90 pb-120 bg-our-service">
+        <section class="section pt-90  bg-our-service">
             <div class="container-sub">
                 <div class="row align-items-center">
                     <div class="col-md-12 col-sm-12 col-7">
@@ -420,7 +420,7 @@
                 </div>
             </div>
         </section>
-        <section class="section pt-120 block-padding-100">
+        <section class="section  block-padding-100">
             <div class="box-fleet-padding bg-2 bg-testimonial">
                 <div class="container-sub">
                     <div class="row align-items-center">
@@ -439,6 +439,43 @@
                                 <div class="box-swiper">
                                     <div class="swiper-container swiper-group-testimonials-2 pb-50">
                                         <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="cardTestimonial">
+                                                    <div class="cardAuthor mb-30">
+                                                        <div class="box-author"> <img
+                                                                src="{{ asset('frontend-assets/assets/imgs/page/homepage2/author.png') }}"
+                                                                alt="luxride">
+                                                            <div class="author-info">
+                                                                <div class="author-name text-18-medium color-text">Sarah M</div>
+                                                                <p class="text-14 color-text desc-author">Business Transfers
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-testimonial">
+                                                        <p class="color-text text-18-medium-2">I’ve used Apex Executive
+                                                        The business transfer service was seamless! The vehicle was comfortable, and the driver was incredibly professional. I was able to prepare for my meeting while on the move, thanks to the stress-free ride. Highly recommend their services for anyone in need of reliable transportation!.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="cardTestimonial">
+                                                    <div class="cardAuthor mb-30">
+                                                        <div class="box-author"> <img
+                                                                src="{{ asset('frontend-assets/assets/imgs/page/homepage2/author.png') }}"
+                                                                alt="luxride">
+                                                            <div class="author-info">
+                                                                <div class="author-name text-18-medium color-text">Hamza Tahir</div>
+                                                                <p class="text-14 color-text desc-author">Event Transportation
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-testimonial">
+                                                        <p class="color-text text-18-medium-2">I hired their service for event transportation, and it was the best decision! The vehicles were clean and spacious, and the drivers were courteous and punctual. Our guests arrived happy and on time!.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="swiper-slide">
                                                 <div class="cardTestimonial">
                                                     <div class="cardAuthor mb-30">
@@ -587,10 +624,7 @@
                                 <div class="accordion-collapse collapse" id="collapseThree"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
                                     <div class="accordion-body">
-                                        We offer a premium fleet of high-spec Mercedes vehicles, including the Mercedes
-                                        E-Class, S-Class, and V-Class. All our chauffeur cars are meticulously maintained
-                                        and serviced regularly to ensure the highest standards of comfort, safety, and
-                                        luxury.
+                                    We offer a premium fleet of Luxurious vehicles, including the Mercedes E-Class, S-Class, BMW 7 Series and Mercedes V-Class. All our chauffeur cars are meticulously maintained and serviced regularly to ensure the highest standards of comfort, safety, and luxury.
                                     </div>
                                 </div>
                             </div>

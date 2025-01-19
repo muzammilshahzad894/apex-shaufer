@@ -10,6 +10,24 @@
     align-items: center;
     margin-bottom: 10px;
 }
+.d-flex.gap-4{
+    font-size: large !important;
+    font-family: unset !important;
+}
+.summary .d-flex.gap-4 {
+    gap: 1.5rem !important;
+    justify-content: space-between;
+    border: 1px solid;
+    padding: 10px 20px;
+    align-items: center;
+}
+#return_date_time{
+    background: #222222;
+    color: white;
+    padding: 14px;
+    width: 100%;
+    cursor: pointer;
+}
 
 .icon_text i.icon-styled {
     font-size: 20px; 
@@ -141,7 +159,7 @@
         <div class="v-middle">
             <div class="container">
                 <div class="row design_style">
-                    <div class="col-lg-6 col-md-12 mt-30">
+                    <div class="col-lg-10 col-md-12 mt-30">
                         <div class="post-wrapper">
                             {{-- <a href="index-2.html">
                                 <div>Home</div>
@@ -149,8 +167,14 @@
                             <div class="divider"></div>
                             <div class="text-white"><a href="#">book online</a></div> --}}
                         </div>
-                        <h1 style="color: #d5b941">Book Your Ride</h1>
-                        <p class="description" style="color: white;">Book Your Cab with Ease! Apex Cabbie offers 24/7 reliable cab services in Bristol and across the UK. With experienced drivers and a commitment to customer satisfaction, we ensure a smooth and stress-free ride every time.</p>
+                        <div style="display:flex;flex-direction:column;gap:20px;">
+                            <h1 style="color: #d5b941;background: rgb(0 0 0 / 37%);padding:10px;">Book Your Chauffeur</h1>
+                            <div>
+                                
+                            <h3 style="color: #d5b941;text-align:center;">Reserve Your Exclusive Chauffeur Service with Ease</h3>
+                            <p class="description" style="color: white;">Apex Executive Cars offers unparalleled 24/7 chauffeur hire services in Bristol and across the UK. With a fleet of luxury vehicles and highly trained chauffeurs, we provide a first-class experience tailored to your needs. Whether for business or leisure, we ensure a seamless, sophisticated, and truly exceptional journey, prioritizing your comfort, discretion, and satisfaction.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -170,10 +194,10 @@
         <div class="container">
             <div class="row payment_section">
                 <ul class="progress-bar_main">
-                    <li class="progress-step active" id="step1">Tab 1</li>
-                    <li class="progress-step" id="step2">Tab 2</li>
-                    <li class="progress-step" id="step3">Tab 3</li>
-                    <li class="progress-step" id="step4">Tab 4</li>
+                    <li class="progress-step active" id="step1">Step 1</li>
+                    <li class="progress-step" id="step2">Step 2</li>
+                    <li class="progress-step" id="step3">Step 3</li>
+                    <li class="progress-step" id="step4">Step 4</li>
                 </ul>
                 <div class="col-md-12">
                     <form action="{{ route('booking.store') }}" method="POST" id="booking-form">
@@ -257,14 +281,14 @@
                                 @endphp
 
                                 <div class="box_style">
-                                    <label for="date">Date & Time:</label>
-                                    <input type="datetime-local" placeholder="Return Date" id="date-time"
-                                        value="{{ isset($booking_detail) ? (isset($booking_detail->booking_date) && isset($booking_detail->booking_time) ? $booking_detail->booking_date . 'T' . $booking_detail->booking_time : '') : '2024-12-08T14:30' }}" />
+    <label for="date">Date & Time:</label>
+    <input class="datetime-picker" type="datetime-local" placeholder="Return Date" id="date-time" 
+        value="{{ isset($booking_detail) ? (isset($booking_detail->booking_date) && isset($booking_detail->booking_time) ? $booking_detail->booking_date . 'T' . $booking_detail->booking_time : '') : date('Y-m-d\TH:i') }}" />
 
+    <p class="minimum_hours"></p>
+    <div id="date-time-error" class="error-message text-danger"></div>
+</div>
 
-                                    <p class="minimum_hours"></p>
-                                    <div id="date-time-error" class="error-message text-danger"></div>
-                                </div>
                                 <div class=" meet_greet d-flex" style="gap:10px;align-items:center"
                                     onclick="showReturn();">
                                     <input type="checkbox" id="return" name="return" value="" class="mb-0"
@@ -275,10 +299,13 @@
                                 <div id="return_location" style="display: none;margin-top:24px;">
                                     <div id="return_date">
                                         <label for="return_date">Return Date & Time:</label>
-                                        <input type="datetime-local" name="return_date_time"
-                                            class="styled-input timepicker border-radius-0 mb-0" placeholder="Return Date"
+                                        <input type="datetime-local" name="return_date_time" 
+                                        
+                                            class=" border-radius-0 mb-0 datetime-picker" placeholder="Return Date"
                                             id="return_date_time"
-                                            value="{{ isset($booking_detail) ? (isset($booking_detail->return_date) && isset($booking_detail->return_time) ? $booking_detail->return_date . 'T' . $booking_detail->return_time : '') : '' }}" />
+                                            value="{{ isset($booking_detail) ? (isset($booking_detail->return_date) && isset($booking_detail->return_time) ? $booking_detail->return_date . 'T' . $booking_detail->return_time : '') : date('Y-m-d\TH:i') }}"
+                                            
+                                            />
                                         <p class="minimum_hours"></p>
                                         <div id="return_date_time-error" class="error-message text-danger"></div>
                                     </div>
@@ -613,7 +640,7 @@
                             </button>
                                 <button type="button" class="button-1 mt-15 mb-15 cutom_button" id="form_submit"
                                     style="display: none" onclick="bookAndPay('admin');">
-                                    Book Now
+                                    Submit  
                                 </button>
                         </div>
                     </form>
@@ -725,9 +752,21 @@
         });
     </script>
     <script>
-        document.getElementById('date-time').addEventListener('click', function() {
-            this.showPicker(); // Opens the native datetime picker
-        });
+ document.querySelectorAll('.datetime-picker').forEach(function (element) {
+    element.addEventListener('click', function () {
+        try {
+            if (this.showPicker) {
+                this.showPicker();
+            } else {
+                this.focus(); // Fallback for unsupported browsers
+            }
+        } catch (error) {
+            console.error("Error in showPicker:", error.message);
+            this.focus(); // Fallback if an error occurs
+        }
+    });
+});
+
     </script>
 
     <script src="https://js.stripe.com/v3/"></script>

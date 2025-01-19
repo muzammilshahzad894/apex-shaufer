@@ -1195,10 +1195,8 @@
                         }
                     }
                     var login_user = document.getElementById('login_user').value;
-                    var messageContent = "Your request has been successfully submitted. The company will contact you soon!";
-                    console.log("hello world",login_user);
+                    var messageContent = "Your request has been successfully submitted. Our Team will contact you to finalize the payment and to confirm your Journey. Sit back, Relax and wait for our confirmation.";
                     if (login_user == '') {
-                        console.log('hereeeeeeee');
                         messageContent += " Please log in to view your booking history.";
                     }
                         $('#exampleModal').modal('show');

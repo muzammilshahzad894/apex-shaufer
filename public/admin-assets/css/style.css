@@ -92,7 +92,9 @@
     --title: #000;
 }
 
-
+td{
+    min-width: 130px !important;
+}
 
 :root {
     --width: 17.5rem;

@@ -219,15 +219,9 @@ class FrontendController extends Controller
     }
     public function getquote(){
         try {
-            
-        $session = session()->all();
-        $ispayment = $session['ispayment'] ?? null;
-        if($ispayment){
-            $redirection = new CarsController();
-            $redirection->redirection();
-        };
             $fleets = Fleet::all();
-            return view('frontend.getquote.index', compact('fleets'));
+            $services = Service::all();
+            return view('frontend.getquote.index',compact('fleets', 'services'));
         } catch (\Exception $e) {
             Log::error('Review Post Error: ' . $e->getMessage());
             return redirect()->back()->with('error', 'Something went wrong while processing your request');
@@ -242,6 +236,7 @@ class FrontendController extends Controller
                 'dropoff' => 'required',
                 'date' => 'required|date',
                 'fleet_id' => 'required',
+                'service_id' => 'required',
                 'fullname' => 'required',
                 'email' => 'required|email',
                 'phone' => 'required',
@@ -265,6 +260,7 @@ class FrontendController extends Controller
             $booking->dropoff = $request->dropoff;
             $booking->date_time = $pickup;
             $booking->fleet_id = intval($request->fleet_id);
+            $booking->service_id = intval($request->service_id);
             $booking->fullname = $request->fullname;
             $booking->email = $request->email;
             $booking->phone = $request->phone;

@@ -85,79 +85,34 @@
         <h1>Apex Cabi Service FAQs</h1>
 
         @php
-            $faqs = [
-                [
-                    'question' => 'What can I expect when booking a ride with Apex Cab Service?',
-                    'answer' =>
-                        'When you book with Apex Cab Service, you can expect punctuality, comfort, and safety. Our professional drivers ensure timely arrivals and a smooth ride to your destination. Whether it\'s an airport transfer or a quick city trip, we make your journey stress-free and enjoyable.',
-                ],
-                [
-                    'question' => 'Are your drivers licensed and background-checked?',
-                    'answer' =>
-                        'Yes, all our drivers are fully licensed and undergo thorough background checks to guarantee your safety. They are trained to offer the best service with a focus on professionalism and reliability.',
-                ],
-                [
-                    'question' => 'What type of vehicles are available?',
-                    'answer' =>
-                        'We offer a wide range of vehicles including economy sedans, luxury cars, SUVs, and spacious 7-seater MPVs. All our vehicles are well-maintained, clean, and equipped with modern amenities for a comfortable experience.',
-                ],
-                [
-                    'question' => 'Can I request a specific driver?',
-                    'answer' =>
-                        'Yes, you can request a specific driver when booking your ride. Simply inform us of your preference, and we will do our best to assign the driver of your choice.',
-                ],
-                [
-                    'question' => 'What payment methods do you accept?',
-                    'answer' =>
-                        'We accept a wide range of payment options including major credit/debit cards, mobile payment apps, and cash. You can choose the most convenient method during the booking process.',
-                ],
-                [
-                    'question' => 'What are your operating hours?',
-                    'answer' =>
-                        'Apex Cab Service operates 24/7, meaning you can book a ride any time, day or night. Our customer support team is available for assistance during business hours, and you can always reach us online.',
-                ],
-                [
-                    'question' => 'Are refreshments available in the vehicle?',
-                    'answer' =>
-                        'Yes, we offer complimentary bottled water in select vehicles. If you require additional refreshments, feel free to request them during your booking.',
-                ],
-                [
-                    'question' => 'How do I identify my driver at the pick-up point?',
-                    'answer' =>
-                        'For airport pickups or scheduled services, your driver will meet you at the designated pick-up point. They will be holding a sign with your name for easy identification.',
-                ],
-                [
-                    'question' => 'Will the driver assist with luggage?',
-                    'answer' =>
-                        'Absolutely! Our drivers are happy to assist you with your luggage both at pick-up and drop-off points.',
-                ],
-                [
-                    'question' => 'What if my flight is delayed?',
-                    'answer' =>
-                        'We monitor flight times to ensure your driver arrives on time. If there is a delay, we adjust the pick-up accordingly, so you don\'t need to worry.',
-                ],
-                [
-                    'question' => 'Can I book a round-trip or regular service?',
-                    'answer' =>
-                        'Yes, we offer both round-trip and regular services for commuters. If you need a recurring service, simply get in touch, and we will create a plan that fits your schedule.',
-                ],
-                [
-                    'question' => 'Do you charge extra for waiting time?',
-                    'answer' =>
-                        'Yes, we do charge a small fee for waiting time, typically based on the duration of the wait. For airport pickups, we offer 1 hour of complimentary waiting time, after which a small fee of £0.30 per minute applies.',
-                ],
-                [
-                    'question' => 'How much notice do I need to cancel a booking?',
-                    'answer' =>
-                        'You can cancel your booking free of charge up to 24 hours before the scheduled pick-up. Cancellations made within 24 hours will incur a fee of 50%. If the driver has already been dispatched, the full fare will apply.',
-                ],
-                [
-                    'question' => 'How do I book a ride?',
-                    'answer' =>
-                        'Booking with Apex Cab Service is easy! You can book via our website, mobile app, or over the phone. Simply provide your pick-up and drop-off details, and we\'ll handle the rest.',
-                ],
-            ];
-        @endphp
+$faqs = [
+    [
+        'question' => '<h5>What to Expect When Booking a Chauffeur Service with Apex Executive Cars?</h5>',
+        'answer' => '<p>Expect punctuality, professionalism, and personalized care. When you book with Apex Executive Cars, your chauffeur will arrive 10-15 minutes ahead of your scheduled time. Dressed smartly and with a professional demeanor, your chauffeur will ensure a smooth and comfortable journey. They will assist with any luggage and open the door for you. In case of inclement weather, your chauffeur will offer an umbrella while escorting you to and from the car.</p>',
+    ],
+    [
+        'question' => '<h5>Are Your Chauffeurs Licensed?</h5>',
+        'answer' => '<p>Yes, all of our chauffeurs are DBS checked and fully licensed by the relevant local authorities. In addition, each chauffeur’s vehicle is also licensed and compliant with local regulations, ensuring a safe and reliable service for every journey.</p>',
+    ],
+    [
+        'question' => '<h5>What Type of Chauffeur Vehicles Do You Have?</h5>',
+        'answer' => '<p>We offer a premium fleet of luxurious vehicles, including the Mercedes E-Class, S-Class, BMW 7 Series, and Mercedes V-Class. All our chauffeur cars are meticulously maintained and serviced regularly to ensure the highest standards of comfort, safety, and luxury.</p>',
+    ],
+    [
+        'question' => '<h5>What Do Your Chauffeurs Wear?</h5>',
+        'answer' => '<p>Our chauffeurs are dressed in a professional uniform consisting of a dark suit, trousers, a white shirt, and a tie, ensuring a polished and sophisticated appearance for every journey.</p>',
+    ],
+    [
+        'question' => '<h5>Do Your Vehicles Have In-Car WiFi?</h5>',
+        'answer' => '<p>Yes, all of our chauffeur cars are equipped with 4G WiFi. Simply ask your chauffeur for the details to stay connected during your journey.</p>',
+    ],
+    [
+        'question' => '<h5>Are There Refreshments in the Vehicle?</h5>',
+        'answer' => '<p>Yes, all our chauffeur cars are stocked with bottled mineral water. If you prefer a different refreshment, simply let us know, and we will do our best to accommodate your request.</p>',
+    ],
+];
+@endphp
+
 
         @foreach ($faqs as $faq)
             <section class="faq-section">

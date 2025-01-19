@@ -41,8 +41,7 @@
                             <li style="display: flex;justify-content:center;"> 
                                 <div class="header-right">
                                         <a
-                                        class="text-14-medium call-phone color-white hover-up" href="tel:+41227157000">+41 22 715
-                                        7000</a>
+                                        class="text-14-medium call-phone color-white hover-up" href="tel:+01173322782">01173322782</a>
                                     </div>
                             </li>
                                    
@@ -111,8 +110,7 @@
                                         <div class="header-right">
                                                 <a
                                                 class="text-14-medium call-phone color-white hover-up"
-                                                style="font-size: larger !important;font-weight:700 !important;color:black !important;margin-left:-22px !important;" href="tel:+41227157000">+41 22 715
-                                                7000</a>
+                                                style="font-size: larger !important;font-weight:700 !important;color:black !important;margin-left:-22px !important;" href="tel:+01173322782">01173322782</a>
                                             </div>
                                     </li>
                                     @guest
