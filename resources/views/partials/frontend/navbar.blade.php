@@ -37,15 +37,17 @@
                                     href="{{ route('frontend.contact') }}">Contact</a></li>
                             <li><a class="{{ request()->routeIs('frontend.faqs') ? 'active' : '' }}"
                                     href="{{ route('frontend.faqs') }}">FAQs</a></li>
+                            <li><a class="{{ request()->routeIs('frontend.trustVoilet') ? 'active' : '' }}" 
+                                    href="{{ route('frontend.trustVoilet') }}">Reviews</a></li>
                             <li> <a href="{{ route('frontend.book-online') }}" class="btn btn-default hover-up">Book Now</a></li>
                             <li style="display: flex;justify-content:center;"> 
                                 <div class="header-right">
                                         <a
-                                        class="text-14-medium call-phone color-white hover-up" href="tel:+01173322782">01173322782</a>
+                                        class="text-14-medium call-phone color-white hover-up" href="tel:01173322782">0117 332 2782</a>
                                     </div>
                             </li>
                                    
-                            @guest
+                            <!-- @guest
                                 <li class=""><a
                                         class="nav-link {{ request()->routeIs('frontend.login') || request()->routeIs('frontend.signup') ? 'active' : '' }}"
                                         href="/login">Login</a></li>
@@ -71,7 +73,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                            @endauth
+                            @endauth -->
 
 
                         </ul>
@@ -110,7 +112,7 @@
                                         <div class="header-right">
                                                 <a
                                                 class="text-14-medium call-phone color-white hover-up"
-                                                style="font-size: larger !important;font-weight:700 !important;color:black !important;margin-left:-22px !important;" href="tel:+01173322782">01173322782</a>
+                                                style="font-size: larger !important;font-weight:700 !important;color:black !important;margin-left:-22px !important;" href="tel:01173322782">0117 332 2782</a>
                                             </div>
                                     </li>
                                     @guest

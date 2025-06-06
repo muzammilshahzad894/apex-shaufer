@@ -72,7 +72,7 @@
                                 <!-- <h5><a href="tel:01173322782">01173322782</a></h5> -->
                                 <div class="footer-contact-link-content">
                                     <h6>Call us</h6>
-                                    <p><a href="tel:01173322782"> 01173322782 </a></p>
+                                    <p><a href="tel:01173322782"> 0117 332 2782</a></p>
                                 </div>
                             </div>
                             <div class="footer-contact-links-divider"></div>
@@ -174,7 +174,7 @@
         <div class="box-footer-top">
           <div class="row align-items-center">
             <div class="col-lg-6 col-md-6 text-md-start text-center mb-15 wow fadeInUp">
-              <div class="d-flex align-items-center justify-content-md-start justify-content-center"><a class="mr-30" href="{{ route('frontend.index') }}"><img style="max-height: 70px;max-width:150px;" src="{{ asset('frontend-assets/img/logo-light.png') }}" alt="Luxride"></a><a class="text-14-medium call-phone color-white hover-up" href="tel:+01173322782">+01173322782</a></div>
+              <div class="d-flex align-items-center justify-content-md-start justify-content-center"><a class="mr-30" href="{{ route('frontend.index') }}"><img style="max-height: 70px;max-width:150px;" src="{{ asset('frontend-assets/img/logo-light.png') }}" alt="Luxride"></a><a class="text-14-medium call-phone color-white hover-up" href="tel:01173322782">0117 332 2782</a></div>
             </div>
             <div class="col-lg-6 col-md-6 text-md-end text-center mb-15 wow fadeInUp">
               <div class="d-flex align-items-center justify-content-md-end justify-content-center"><span class="text-18-medium color-white mr-10">Follow Us</span><a class="icon-socials icon-facebook" href="#"></a><a class="icon-socials icon-twitter" href="#"></a><a class="icon-socials icon-instagram" href="#"></a><a class="icon-socials icon-linkedin" href="#"></a></div>
@@ -224,7 +224,7 @@
       <div class="container-sub">
         <div class="footer-bottom">
           <div class="row align-items-center">
-            <div class="col-lg-8 col-md-12 text-center text-lg-start"><span class="text-14 color-white mr-50">© 2024 CHAUFFEUR SERVICE</span>
+            <div class="col-lg-8 col-md-12 text-center text-lg-start"><span class="text-14 color-white mr-50">© {{ date('Y') }} APEX EXECUTIVE CARS. All rights reserved.</span>
               
             </div>
           </div>
