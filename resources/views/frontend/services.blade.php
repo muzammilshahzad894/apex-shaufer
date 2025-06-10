@@ -32,12 +32,12 @@
                     @foreach($services as $service)
                         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                             <div class="cardFleet wow fadeInUp">
-                                <div class="cardImage mb-30"><img style="height: 300px;"
+                                <div class="cardImage mb-30"><img style="height: 250px;"
                                    src="{{ asset('uploads/services/'.$service->image) }}"
                                     alt="Luxride"></div>
                                 <div class="cardInfo">
-                                        <h3 class="text-20-medium color-text mb-10">{{ $service->name }}</h3>
-                                    
+                                    <h3 class="text-20-medium color-text mb-10">{{ $service->name }}</h3>
+                                    <p class="service-tag mb-2">{{ $service->tag }}</p>
                                     <p class="text-14 color-text mb-30  two-lines">
                                         {{ $service->short_description }}
                                     </p>
@@ -45,7 +45,7 @@
                                
                                 <div class="cardInfoBottom" style="justify-content: space-between">
                                     <a class="view_details" href="{{ route('frontend.carDetails', $service->id) }}">View Details</a>
-                                    <a class="view_details" href="{{ route('frontend.book-online', ['id' => $service->id, 'name' => str_replace(' ', '-', $service->name)]) }}">Book Now</a>
+                                    <a class="view_details" href="{{ route('frontend.getquote', ['id' => $service->id, 'name' => str_replace(' ', '-', $service->name)]) }}">Book Now</a>
                                 </div>
                             
                             </div>
@@ -136,11 +136,17 @@
     }
 
     .view_details:hover {
-        background: #ff8120;
+        background: #d7b733;
         color: wheat;
         cursor: pointer;
     }
-
+    .service-tag {
+        color: #d5b941;
+        font-family: 'Outfit', sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.95em;
+    }
     .cars_details_view {
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
         border: 4px solid #d5b941;

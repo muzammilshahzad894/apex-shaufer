@@ -1,5 +1,38 @@
 @extends('layouts.frontend.app')
 <style>
+    .hero-section {
+        position: relative;
+        background-image: url('{{ asset('frontend-assets/img/slider/about-us.jpg') }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        overflow: hidden;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 800px;
+        padding: 60px 20px;
+        animation: fadeUp 1.5s ease forwards;
+    }
+
     .about-us.section-padding{
         background: rgb(0 0 0 / 4%);
     }
@@ -12,14 +45,12 @@
     }
 
     .banner-header {
-        min-height: 520px;
-        
+        min-height: 80vh;   
     }
 
     .offer_img {
         height: 300px;
         max-width: 450px !important;
-
     }
 
     .img-fluid {
@@ -152,26 +183,10 @@
 </style>
 
 @section('content')
-    <!-- Header Banner -->
-    <section class="banner-header section-padding bg-img" data-overlay-dark="4"
-        data-background="{{ asset('frontend-assets/img/slider/aboutus.png') }}">
-        <div class="v-middle">
-            <div class="container">
-                <div class="row">
-                    {{-- <div class="col-md-12 mobile_screen">
-                    <h1>About <span>Us</span></h1>
-                </div> --}}
-
-
-                    <div class="col-md-12 text-center " style="">
-                        <h1 style="" class="home_heading">About Us </h1>
-                        <!-- <p class="home_p" style="max-width: 600px; margin: 0 auto; color:#ffc107;">
-                                Your premier pre-booking platform for reliable taxi services in Bristol, UK. Enjoy seamless
-                                travel from airport transfers to city tours. Book now for stress-free journeys!
-                            </p> -->
-                    </div>
-                </div>
-            </div>
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 style="" class="home_heading">About Us </h1>
         </div>
     </section>
     <section class="about-us section-padding">

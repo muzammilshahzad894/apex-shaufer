@@ -10,10 +10,20 @@
       padding : 14px 30px !important;
     }
   }
+  .booking-process-icon {
+    height: 90px;
+    width: 90px;
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+  .booking-process-icon:hover {
+    background-color: #d5b941;
+    border: 1px solid #d5b941;
+  }
 </style>
 @section('content')
 <!-- Header Banner -->
-<section class="banner-header middle-height section-padding bg-img contact" data-overlay-dark="5" data-background="{{ asset('frontend-assets/img/slider/about.png') }}">
+<section class="banner-header middle-height section-padding bg-img contact" data-overlay-dark="5" data-background="{{ asset('frontend-assets/img/slider/contact.jpg') }}">
     <div class="v-middle">
         <div class="container">
             <div class="row">
@@ -33,84 +43,61 @@
         <div class="row">
           <div class="col-lg-3 col-sm-6 mb-30">
             <div class="cardContact wow fadeInUp">
-              <div class="cardImage mb-30">
-                <img
-                  src="{{ asset('frontend-assets/img/contact/new-york.svg') }}"
-                  alt="luxride"
-                />
+              <div class="mb-3 d-flex justify-content-center booking-process-step">
+                <i class="fa fa-envelope fa-2x booking-process-icon d-flex justify-content-center align-items-center"></i>
               </div>
-              <div class="cardInfo">
+              <div class="cardInfo text-center">
                 <h6 class="heading-20-medium mb-10">
-                  New York<!-- -->
-                  Office
+                  Write email
                 </h6>
                 <p class="text-16 mb-20">
-                  PO Box 16122 Collins Street West Victoria 8007 Australia
+                  info@apexcabbie.com
                 </p>
-                <p class="text-16 mb-20">+32 2 512 08 15</p>
-                <p class="text-16">newyork@luxride.com</p>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 mb-30">
             <div class="cardContact wow fadeInUp">
-              <div class="cardImage mb-30">
-                <img
-                  src="{{ asset('frontend-assets/img/contact/istabul.svg') }}"
-                  alt="luxride"
-                />
+              <div class="mb-3 d-flex justify-content-center booking-process-step">
+                <i class="fa fa-map-marker-alt fa-2x booking-process-icon d-flex justify-content-center align-items-center"></i>
               </div>
-              <div class="cardInfo">
+              <div class="cardInfo text-center">
                 <h6 class="heading-20-medium mb-10">
-                  Istanbul<!-- -->
-                  Office
+                  Our address
                 </h6>
                 <p class="text-16 mb-20">
-                  PO Box 16122 Collins Street West Victoria 8007 Australia
+                  81 Blackberry Hill, Bath Bs161df
                 </p>
-                <p class="text-16 mb-20">+32 2 512 08 15</p>
-                <p class="text-16">istanbul@luxride.com</p>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 mb-30">
             <div class="cardContact wow fadeInUp">
-              <div class="cardImage mb-30">
-                <img 
-                  src="{{ asset('frontend-assets/img/contact/paris.svg') }}"
-                 alt="luxride" />
+              <div class="mb-3 d-flex justify-content-center booking-process-step">
+                <i class="fa fa-phone fa-2x booking-process-icon d-flex justify-content-center align-items-center"></i>
               </div>
-              <div class="cardInfo">
+              <div class="cardInfo text-center">
                 <h6 class="heading-20-medium mb-10">
-                  Paris<!-- -->
-                  Office
+                  Call us
                 </h6>
                 <p class="text-16 mb-20">
-                  PO Box 16122 Collins Street West Victoria 8007 Australia
+                  <a href="tel:01173322782" class="text-decoration-none text-dark">0117 332 2782</a><br>
                 </p>
-                <p class="text-16 mb-20">+32 2 512 08 15</p>
-                <p class="text-16">paris@luxride.com</p>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 mb-30">
             <div class="cardContact wow fadeInUp">
-              <div class="cardImage mb-30">
-                <img
-                  src="{{ asset('frontend-assets/img/contact/london.svg') }}"
-                  alt="luxride"
-                />
+              <div class="mb-3 d-flex justify-content-center booking-process-step">
+                <i class="fa fa-phone fa-2x booking-process-icon d-flex justify-content-center align-items-center"></i>
               </div>
-              <div class="cardInfo">
+              <div class="cardInfo text-center">
                 <h6 class="heading-20-medium mb-10">
-                  London<!-- -->
-                  Office
+                  WhatsApp us
                 </h6>
                 <p class="text-16 mb-20">
-                  PO Box 16122 Collins Street West Victoria 8007 Australia
+                  +44 7533 225970
                 </p>
-                <p class="text-16 mb-20">+32 2 512 08 15</p>
-                <p class="text-16">london@luxride.com</p>
               </div>
             </div>
           </div>
@@ -148,7 +135,7 @@
               <div class="row">
                 <div class="col-lg-6 col-md-6">
                   <div class="form-group">
-                    <label class="form-label" for="fullname">Full Name</label
+                    <label class="form-label" for="fullname">Full Name *</label
                     ><input
                       name="name"
                       class="form-control"
@@ -161,7 +148,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="form-group">
-                    <label class="form-label" for="email">Email</label
+                    <label class="form-label" for="email">Email *</label
                     ><input
                       name="email"
                       class="form-control"
@@ -174,7 +161,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="form-group">
-                    <label class="form-label" for="phone">Phone</label
+                    <label class="form-label" for="phone">Phone *</label
                     ><input
                       name="phone"
                       class="form-control"
@@ -187,7 +174,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="form-group">
-                    <label class="form-label" for="subject">Subject</label
+                    <label class="form-label" for="subject">Subject *</label
                     ><input
                       name="subject"
                       class="form-control"
@@ -200,7 +187,7 @@
                 </div>
                 <div class="col-lg-12">
                   <div class="form-group">
-                    <label class="form-label" for="message">Message</label
+                    <label class="form-label" for="message">Message *</label
                     ><textarea name="message" class="form-control" id="message" required></textarea>
                   </div>
                 </div>

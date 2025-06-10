@@ -39,7 +39,7 @@
                                     href="{{ route('frontend.faqs') }}">FAQs</a></li>
                             <li><a class="{{ request()->routeIs('frontend.trustVoilet') ? 'active' : '' }}" 
                                     href="{{ route('frontend.trustVoilet') }}">Reviews</a></li>
-                            <li> <a href="{{ route('frontend.book-online') }}" class="btn btn-default hover-up">Book Now</a></li>
+                            <li> <a href="{{ route('frontend.getquote') }}" class="btn btn-default hover-up">Book Now</a></li>
                             <li style="display: flex;justify-content:center;"> 
                                 <div class="header-right">
                                         <a

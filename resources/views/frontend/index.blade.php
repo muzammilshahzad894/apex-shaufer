@@ -162,9 +162,9 @@
 
     .view_details {
         color: white;
-        background: #d5b941;
+        background: #d7b733;
         border: none;
-        padding: 5px 10px;
+        padding: 10px 10px;
         border-radius: 10px;
         width: 120px;
         text-align: center;
