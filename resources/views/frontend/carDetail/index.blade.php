@@ -219,8 +219,10 @@
         <div class="container-sub">
             <div class="row align-items-center">
                 <div class="col-md-12 col-sm-12 col-7">
-                    <h2 class="heading-44-medium title-fleet wow fadeInUp" style="clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
-    background: #d5b941;color:white;">Our Services</h2>
+                    <h2 class="heading-44-medium title-fleet wow fadeInUp" 
+                        style="clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%); background: #d5b941;color:white;">
+                        Our Services
+                    </h2>
                 </div>
             </div>
         </div>
