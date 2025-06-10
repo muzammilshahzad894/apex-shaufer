@@ -218,7 +218,6 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         background-color: #ffffff;
-        min-height: 486px;
     }
 
     .review-card:hover {
@@ -272,7 +271,7 @@
                                         
                                             <div class="cardInfoBottom" style="justify-content: space-between">
                                                 <a class="view_details" href="{{ route('frontend.carDetails', $service->id) }}">View Details</a>
-                                                <a class="view_details" href="{{ route('frontend.book-online', ['id' => $service->id, 'name' => str_replace(' ', '-', $service->name)]) }}">Book Now</a>
+                                                <a class="view_details" href="{{ route('frontend.getquote', ['id' => $service->id, 'name' => str_replace(' ', '-', $service->name)]) }}">Book Now</a>
                                             </div>
                                         
                                         </div>

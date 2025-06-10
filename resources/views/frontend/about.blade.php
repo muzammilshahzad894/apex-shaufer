@@ -226,9 +226,7 @@
                     </div>
                 </div>
             </div>
-
-
-
+            
             <div class="row">
                 <div class="d-flex text-center" style="width:100%; justify-content:center; padding:20px 0px">
                     <h4 class="section-title">
@@ -335,52 +333,61 @@
                     @endforeach
                 </div>
 
-                <section class="section  pb-20 bg-primary bg-how-it-works" style="padding-top: 30px;">
-            <div class="container-sub">
-                <h2 class="heading-44-medium color-white mb-60 wow fadeInUp">Reservation Steps </h2>
-                <div class="row">
-                    <div class="col-lg-6 order-lg-last">
-                        <div class="box-main-slider">
-                            <div class="detail-gallery wow fadeInUp">
-                                <div class="main-image-slider">
-                                    <figure><img src="{{ asset('frontend-assets/assets/imgs/page/homepage1/laptop.png') }}"
-                                            alt="luxride"></figure>
-                                    <figure><img
-                                            src="{{ asset('frontend-assets/assets/imgs/page/homepage1/desktop.png') }}"
-                                            alt="luxride"></figure>
-                                    <figure><img
-                                            src="{{ asset('frontend-assets/assets/imgs/page/homepage1/desktop2.png') }}"
-                                            alt="luxride"></figure>
+                <section class="section mt-40">
+                    <div class="container-sub">
+                        <div class="row align-items-center">
+                            <div class="text-center mb-5">
+                                <h2 class="fw-bold">Booking Process</h2>
+                            </div>
+                        </div>
+                        <div class="row mt-50 cardIconStyleCircle">
+                            <div class="col-lg-4">
+                                <div class="cardIconTitleDesc wow fadeInUp">
+                                    <div class="mb-3 d-flex justify-content-center booking-process-step">
+                                        <i class="fa fa-calendar-alt fa-3x booking-process-icon d-flex justify-content-center align-items-center"></i>
+                                    </div>
+                                    <div class="cardTitle">
+                                        <h5 class="text-20-medium color-text">Book Online or Get a Quote</h5>
+                                    </div>
+                                    <div class="cardDesc">
+                                        <p class="text-16 color-text">Make your booking online or request a quote through our user-friendly website, ensuring safe payments, data protection, and customer safety.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="cardIconTitleDesc wow fadeInUp">
+                                    <div class="mb-3 d-flex justify-content-center booking-process-step">
+                                        <i class="fa fa-car fa-3x booking-process-icon d-flex justify-content-center align-items-center"></i>
+                                    </div>
+                                    <div class="cardTitle">
+                                        <h5 class="text-20-medium color-text">Choose Your Vehicle</h5>
+                                    </div>
+                                    <div class="cardDesc">
+                                        <p class="text-16 color-text">Explore Apex Cabbie’s diverse fleet and service options for a seamless and enjoyable ride.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="cardIconTitleDesc wow fadeInUp">
+                                    <div class="mb-3 d-flex justify-content-center booking-process-step">
+                                        <i class="far fa-smile fa-3x booking-process-icon d-flex justify-content-center align-items-center"></i>
+                                    </div>
+                                    <div class="cardTitle">
+                                        <h5 class="text-20-medium color-text">Enjoy Your Ride</h5>
+                                    </div>
+                                    <div class="cardDesc">
+                                        <p class="text-16 color-text">Experience each journey with Apex Cabbie, where our skilled drivers guarantee a smooth and secure ride.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 order-lg-first justify-content-between position-z3 wow fadeInUp">
-                        <ul class="slider-nav-thumbnails list-how">
-                            <li> <span class="line-white"></span>
-                                <h4 class="text-20-medium mb-20">Get A Quote</h4>
-                                <p class="text-16">Select your destination, preferred time, and service type from our
-                                    easy-to-use booking system.</p>
-                            </li>
-                            <li> <span class="line-white"></span>
-                                <h4 class="text-20-medium mb-20">Choose Your Vehicle</h4>
-                                <p class="text-16">Pick from our luxurious fleet to match your style and travel needs.
-                                    Provide your contact details to proceed.</p>
-                            </li>
-                            <li> <span class="line-white"></span>
-                                <h4 class="text-20-medium mb-20">Confirm Your Journey</h4>
-                                <p class="text-16">Review your booking summary. Our team will contact you to finalize
-                                    payment and confirm your ride. Sit back and enjoy the journey!</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </section>
+                
+                
                 {{-- <div class="d-flex text-center" style="width:100%; justify-content:center; padding:20px 0px">
                     <h4 class="section-title">Why Choose <span>Us</span></h4>
                 </div>
-
 
                 <div class="col-md-6 order_2">
                     <div class="section-subtitle"></div>

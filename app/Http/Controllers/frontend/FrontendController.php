@@ -244,7 +244,7 @@ class FrontendController extends Controller
                 'dropoff_postal_code' => 'required',
                 'pickup_city' => 'required',
                 'dropoff_city' => 'required',
-                
+                'return_journey' => 'required|boolean',
             ]);
     
             
