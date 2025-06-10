@@ -57,7 +57,7 @@
                     </a>
                 </li> --}}
 
-                <li class="{{ request()->routeIs('admin.draft.index') || request()->routeIs('admin.draft.create') ? 'mm-active' : '' }} || request()->routeIs('admin.draft.edit')">
+                <!-- <li class="{{ request()->routeIs('admin.draft.index') || request()->routeIs('admin.draft.create') ? 'mm-active' : '' }} || request()->routeIs('admin.draft.edit')">
                     <a href="{{ route('admin.draft.index') }}" class="" aria-expanded="false">
                         <i class="fa fa-file-alt"></i>
                         <span class="nav-text">Draft Bookings</span>
@@ -80,7 +80,7 @@
                         <i class="fa fa-clipboard-list"></i>
                         <span class="nav-text">Completed bookings</span>
                     </a>
-                </li>
+                </li> -->
                 {{-- <li class="{{ request()->routeIs('admin.refunds.index') ? 'mm-active' : '' }}">
                     <a href="{{ route('admin.refunds.index') }}" class="" aria-expanded="false">
                         <i class="fa fa-undo"></i>
