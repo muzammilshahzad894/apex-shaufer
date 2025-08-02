@@ -262,8 +262,8 @@
                             <!-- Normal order -->
                             <div class="col-lg-6 col-md-12 mb-30 mt-2">
                                 <div class="content">
-                                    <div class="section-subtitle">{{ $service->detail_page_tag }}</div>
-                                    <div class="section-title">{{ $service->detail_page_first_heading }}
+                                    <!-- <div class="section-subtitle">{{ $service->detail_page_tag }}</div> -->
+                                    <div class="section-title" style="font-size: 30px;">{{ $service->detail_page_first_heading }} &nbsp;
                                         <span>{{ $service->detail_page_second_heading }}</span>
                                     </div>
                                     <p class="mb-30">{{ $service->detail_page_description }}</p>
@@ -296,8 +296,8 @@
                             <div class="col-lg-6 offset-lg-1 col-md-12 mt-2">
                                 <div class="content">
 
-                                    <div class="section-subtitle">{{ $service->detail_page_tag }}</div>
-                                    <div class="section-title">{{ $service->detail_page_first_heading }}
+                                    <!-- <div class="section-subtitle">{{ $service->detail_page_tag }}</div> -->
+                                    <div class="section-title" style="font-size: 30px;">{{ $service->detail_page_first_heading }} &nbsp;
                                         <span>{{ $service->detail_page_second_heading }}</span>
                                     </div>
                                     <p class="mb-30">{{ $service->detail_page_description }}</p>

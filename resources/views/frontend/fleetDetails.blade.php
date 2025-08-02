@@ -175,7 +175,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center header-details">
-                        <h6>Our Fleet</h6>
+                        <!-- <h6>Our Fleet</h6> -->
                         {{-- <h1>Our <span>Services</span></h1> --}}
                         <h1>{{ $fleet->name }}</h1>
                     </div>
@@ -188,7 +188,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 mb-30">
                     <div class="content">
-                        <div class="section-subtitle">{{ $fleet->name }}</div>
+                        <!-- <div class="section-subtitle">{{ $fleet->name }}</div> -->
                         <div class="section-title">
                             {{ $fleet->about_car }} <span></span>
                         </div>

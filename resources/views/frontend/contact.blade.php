@@ -28,7 +28,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center" style="background:rgb(0 0 0 / 25%);padding:10px 40px;">
-                    <h6 style="color:#d5b941;">Get in touch</h6>
+                    <!-- <h6 style="color:#d5b941;">Get in touch</h6> -->
                     <h1 style="color:white">Contact <span>Us</span></h1>
                 </div>
             </div>

@@ -294,6 +294,7 @@ class FrontendController extends Controller
             
             return redirect()->back()->with('success', 'Quote sent successfully');
         } catch (\Exception $e) {
+            dd($e->getMessage());
             Log::error('Quote Post Error: ' . $e->getMessage());
             return redirect()->back()->with('error', 'Something went wrong while processing your request');
         }

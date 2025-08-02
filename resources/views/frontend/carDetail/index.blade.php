@@ -176,7 +176,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center header-details">
-                        <h6>What We Do</h6>
+                        <!-- <h6>What We Do</h6> -->
                         {{-- <h1>Our <span>Services</span></h1> --}}
                         <h1>{{$service->name}}</h1>
                     </div>
@@ -189,8 +189,8 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 mb-30">
                     <div class="content">
-                        <div class="section-subtitle">{{ $service->detail_page_tag }}</div>
-                        <div class="section-title">{{ $service->detail_page_first_heading }} <span>{{ $service->detail_page_second_heading }}</span></div>
+                        <!-- <div class="section-subtitle">{{ $service->detail_page_tag }}</div> -->
+                        <div class="section-title">{{ $service->detail_page_first_heading }} &nbsp;<span>{{ $service->detail_page_second_heading }}</span></div>
                         <p class="mb-30">{{$service->detail_page_description}}</p>
                         <ul class="list-unstyled list mb-30">
                             @foreach(explode(',', $service->detail_page_features) as $feature)
@@ -215,61 +215,61 @@
     </section>
 
  
-    <section class="section pt-90 pb-120 bg-our-service">
-        <div class="container-sub">
+    <section class="section pt-40">        
+        <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-12 col-sm-12 col-7">
-                    <h2 class="heading-44-medium title-fleet wow fadeInUp" 
-                        style="clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%); background: #d5b941;color:white;">
-                        Our Services
-                    </h2>
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Our Services</h2>
                 </div>
             </div>
         </div>
-        <div class="box-slide-fleet mt-50">
-            <div class="box-swiper">
-                <div class="swiper-container swiper-group-4-fleet pb-0">
-                    <div class="swiper-wrapper">
-                        @if($services->count() > 0)
-                        @foreach($services as $service)
-                                <div class="swiper-slide">
-                                    <div class="cardFleet wow fadeInUp">
-                                        <div class="cardImage mb-30"><img style="height: 300px;"
-                                           src="{{ asset('uploads/services/'.$service->image) }}"
-                                            alt="Luxride"></div>
-                                        <div class="cardInfo">
+        
+        <div class="container">
+            <div class="box-slide-fleet mt-50">
+                <div class="box-swiper">
+                    <div class="swiper-container swiper-group-4-fleet pb-0">
+                        <div class="swiper-wrapper">
+                            @if($services->count() > 0)
+                            @foreach($services as $service)
+                                    <div class="swiper-slide">
+                                        <div class="cardFleet wow fadeInUp">
+                                            <div class="cardImage mb-30"><img style="height: 250px;"
+                                                src="{{ asset('uploads/services/'.$service->image) }}"
+                                                alt="Luxride">
+                                            </div>
+                                            <div class="cardInfo">
                                                 <h3 class="text-20-medium color-text mb-10">{{ $service->name }}</h3>
-                                            
-                                            <p class="text-14 color-text mb-30  two-lines">
-                                                {{ $service->short_description }}
-                                            </p>
+                                                <p class="service-tag mb-2">{{ $service->tag }}</p>
+                                                <p class="text-14 color-text mb-30  two-lines">
+                                                    {{ $service->short_description }}
+                                                </p>
+                                            </div>
+                                        
+                                            <div class="cardInfoBottom" style="justify-content: space-between">
+                                                <a class="view_details" href="{{ route('frontend.carDetails', $service->id) }}">View Details</a>
+                                                <a class="view_details" href="{{ route('frontend.getquote', ['id' => $service->id, 'name' => str_replace(' ', '-', $service->name)]) }}">Book Now</a>
+                                            </div>
+                                        
                                         </div>
-                                       
-                                        <div class="cardInfoBottom" style="justify-content: space-between">
-                                            <a class="view_details" href="{{ route('frontend.carDetails', $service->id) }}">View Details</a>
-                                            <a class="view_details" href="{{ route('frontend.book-online', ['id' => $service->id, 'name' => str_replace(' ', '-', $service->name)]) }}">Book Now</a>
-                                        </div>
-                                    
                                     </div>
-                                </div>
-                            @endforeach
-                        @endif
-                      
-                    </div>
-                    <div class="box-pagination-fleet">
-                        <div class="swiper-button-prev swiper-button-prev-fleet">
-                            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path>
-                            </svg>
+                                @endforeach
+                            @endif
                         </div>
-                        <div class="swiper-button-next swiper-button-next-fleet">
-                            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
-                            </svg>
+                        <div class="box-pagination-fleet mt-20 d-flex justify-content-start align-items-center">
+                            <div class="swiper-button-prev swiper-button-prev-fleet">
+                                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next swiper-button-next-fleet">
+                                <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
