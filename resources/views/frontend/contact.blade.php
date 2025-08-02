@@ -66,7 +66,7 @@
                   Our address
                 </h6>
                 <p class="text-16 mb-20">
-                  81 Blackberry Hill, Bath Bs161df
+                  Bath, UK
                 </p>
               </div>
             </div>

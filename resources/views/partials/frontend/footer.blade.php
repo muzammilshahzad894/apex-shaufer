@@ -92,9 +92,7 @@
                                 </div>
                                 <div class="footer-contact-link-content">
                                     <h6>Address</h6>
-                                    <p>81 Blackberry Hill
-                                        Bristol
-                                        Bs161df</p>
+                                    <p>Bath, UK</p>
                                 </div>
                             </div>
                         </div>
